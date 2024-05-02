@@ -249,67 +249,74 @@
                 aria-label="Close"
                 class="chakra-modal__close-btn"
                 >
-                <svg
-                    viewBox="0 0 24 24"
-                    focusable="false"
-                    class="chakra-icon css-onkibi"
-                    aria-hidden="true"
-                >
-                    <path
-                    fill="currentColor"
-                    d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"
-                    ></path>
-                </svg>
+                    <svg
+                        viewBox="0 0 24 24"
+                        focusable="false"
+                        class="chakra-icon css-onkibi"
+                        aria-hidden="true"
+                    >
+                        <path
+                        fill="currentColor"
+                        d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"
+                        ></path>
+                    </svg>
                 </button>
-                <div class="chakra-modal__body css-aot8jp" id="chakra-modal--body-:r5:">
-                <div class="css-wkpw2c">
-                    <div class="css-1gj4t3y">
-                    <img
-                        alt="logo"
-                        src="./images/logo.png"
-                        class="chakra-image css-fpn4cd"
-                    />
-                    </div>
-                    <div class="css-ndo0tc">
-                    <div class="css-1f2qzn3">
-                        <div class="css-jilke5">
-                        <a
-                            class="BurgerMenu_BurgerMenu__item__tdNjN"
-                            href="https://app.altar.cash"
-                            >app</a
-                        >
+                <div class="chakra-modal__body" id="chakra-modal--body-:r5:">
+                    <div class="css-wkpw2c">
+                        <div class="css-1gj4t3y">
+                            <img
+                                alt="logo"
+                                src="./images/logo.png"
+                                class="chakra-image css-fpn4cd"
+                            />
                         </div>
-                        <div class="css-jilke5">
-                        <a
-                            class="BurgerMenu_BurgerMenu__item__tdNjN"
-                            href="https://app.altar.cash/#/referrals"
-                            >referrals</a
-                        >
+                        <div class="css-1f2qzn3">
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="index.php"
+                                    >Home</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="rent.php"
+                                    >Rent</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    target="_blank"
+                                    href="buy.php"
+                                    rel="noopener noreferrer"
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    >Buy</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="commercial.php"
+                                    >Commercial</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="management.php"
+                                    >Management</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="contact.php"
+                                    >Contact</a
+                                >
+                            </div>
                         </div>
-                        <div class="css-jilke5">
-                        <a
-                            target="_blank"
-                            href="https://docs.altar.cash"
-                            rel="noopener noreferrer"
-                            class="BurgerMenu_BurgerMenu__item__tdNjN"
-                            >docs</a
-                        >
-                        </div>
-                        <div class="css-jilke5">
-                        <a
-                            class="BurgerMenu_BurgerMenu__item__tdNjN"
-                            href="https://app.altar.cash/#/ecosystem"
-                            >ecosystem</a
-                        >
-                        </div>
                     </div>
-                    </div>
-                    <div class="css-1h8a3wt">
-                    <div class="css-1k6z7kr">
-                        <a target="_blank" href="https://app.altar.cash">Launch App</a>
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
