@@ -117,21 +117,36 @@ const sr = ScrollReveal({
 // ============= Hamburger ============
 // JavaScript for toggling mobile menu
 document.addEventListener('DOMContentLoaded', function() {
-    var hamburgerIcon = document.querySelector('.hamburger');
+    var hamburgerIcon = document.getElementById('hamburgerIcon');
     var hamMenu = document.getElementById('hamMenu');
+    var hamClose = document.getElementById('hamClose');
+    var hamContent = document.getElementById('hamContent');
+    var hamburgerMenu = document.getElementById('hamburger-menu');
 
     // Function to toggle the visibility of the hamburger menu
     function toggleMenu() {
-        if (hamMenu.style.display === 'block') {
-            hamMenu.style.display = 'none'; // Hide the menu
-        } else {
-            hamMenu.style.display = 'block'; // Show the menu
-        }
+        hamMenu.style.transform = 'translateX(0px)'; // Hide the menu
+        hamContent.style.zIndex = 101;
+        hamburgerMenu.style.display = "none";
+    }
+
+    function disableMenu() {
+        hamMenu.style.transform = 'translateX(390px)';
+        hamContent.style.zIndex = 0;
+        hamburgerMenu.style.display = "flex";
     }
 
     // Event listener for the hamburger icon click
     hamburgerIcon.addEventListener('click', function() {
         toggleMenu(); // Toggle the menu visibility
+    });
+
+    hamClose.addEventListener('click', function() {
+        disableMenu(); // Toggle the menu visibility
+    });
+
+    hamContent.addEventListener('click', function() {
+        disableMenu(); // Toggle the menu visibility
     });
 });
 

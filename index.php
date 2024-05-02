@@ -78,7 +78,7 @@
                 </div>
 
                 <!-- Theme change button -->
-                <div class="hamburger-menu">
+                <div class="hamburger-menu" id='hamburger-menu'>
                     <i class='bx bx-moon change-theme' id="theme-button"></i>
                     <a href="javascript:void(0);" class="hamburger" id="hamburgerIcon">
                         <i class="fa fa-bars"></i>
@@ -235,10 +235,10 @@
 		<!-- Footer -->
 
         <!-- Nav Menu Start -->
-        <div class="chakra-modal__content-container">
+        <div class="chakra-modal__content-container" id="hamContent">
             <div
                 role="dialog"
-                id="chakra-modal-:r5:"
+                id="hamMenu"
                 tabindex="-1"
                 aria-modal="true"
                 class="chakra-modal__content"
@@ -248,6 +248,7 @@
                 type="button"
                 aria-label="Close"
                 class="chakra-modal__close-btn"
+                id="hamClose"
                 >
                     <svg
                         viewBox="0 0 24 24"
@@ -264,11 +265,9 @@
                 <div class="chakra-modal__body" id="chakra-modal--body-:r5:">
                     <div class="css-wkpw2c">
                         <div class="css-1gj4t3y">
-                            <img
-                                alt="logo"
-                                src="./images/logo.png"
-                                class="chakra-image css-fpn4cd"
-                            />
+                            <a href="index.php" class="nav__logo">
+                                Brittania Estates <i class="bx bxs-home-alt-2"></i>
+                            </a>
                         </div>
                         <div class="css-1f2qzn3">
                             <div class="css-jilke5">
