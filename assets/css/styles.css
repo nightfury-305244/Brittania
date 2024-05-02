@@ -268,9 +268,13 @@ body.dark-theme{
   color: var(--first-color);
 }
 
+.scroll-header .hamburger{
+  color: var(--text-color);
+}
+
 .chakra-modal__content-container {
   display: flex;
-  width: 100vw;
+  width: 0vw;
   height: 100vh;
   position: fixed;
   left: 0px;
@@ -793,9 +797,8 @@ body.dark-theme{
 
 /* Grid Containers */
 .grid__container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 80px; /* Adjust as needed */
   gap: 8px;
 }

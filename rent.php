@@ -19,13 +19,13 @@
     </head>
     <body>
     <header class="header" id="header">
-    <nav class="nav container">
+    <nav class="nav">
             <a href="index.php" class="nav__logo">
                 Brittania Estates <i class="bx bxs-home-alt-2"></i>
             </a>
     
-            <div class="nav__list">
-                <ul>
+            <div class="nav__menu">
+                <ul class="nav__list">
                     <li class="nav__item">
                         <a href="index.php" class="nav__link">
                             <i class='bx bx-home-alt-2'></i>
@@ -66,14 +66,12 @@
             </div>
     
             <!-- Theme change button -->
-            <a href="#" class="nav__link">
-                <i class='bx bx-moon change-theme' id="themeButton"></i>
-            </a>
-    
-            <!-- Hamburger menu -->
-            <a href="javascript:void(0);" class="hamburger" id="hamburgerIcon" onclick="toggleNav()">
-                <i class="fa fa-bars"></i>
-            </a>
+            <div class="hamburger-menu" id='hamburger-menu'>
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+                <a href="javascript:void(0);" class="hamburger" id="hamburgerIcon">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </nav>
 </header>
 
@@ -264,6 +262,93 @@ hamburger.addEventListener('click', () => {
 				});
 		</script>
 		<!-- Footer -->
+
+        <!-- Nav Menu Start -->
+        <div class="chakra-modal__content-container" id="hamContent">
+            <div
+                role="dialog"
+                id="hamMenu"
+                tabindex="-1"
+                aria-modal="true"
+                class="chakra-modal__content"
+                aria-describedby="chakra-modal--body-:r5:"
+            >
+                <button
+                type="button"
+                aria-label="Close"
+                class="chakra-modal__close-btn"
+                id="hamClose"
+                >
+                    <svg
+                        viewBox="0 0 24 24"
+                        focusable="false"
+                        class="chakra-icon css-onkibi"
+                        aria-hidden="true"
+                    >
+                        <path
+                        fill="currentColor"
+                        d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"
+                        ></path>
+                    </svg>
+                </button>
+                <div class="chakra-modal__body" id="chakra-modal--body-:r5:">
+                    <div class="css-wkpw2c">
+                        <div class="css-1gj4t3y">
+                            <a href="index.php" class="nav__logo">
+                                Brittania Estates <i class="bx bxs-home-alt-2"></i>
+                            </a>
+                        </div>
+                        <div class="css-1f2qzn3">
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="index.php"
+                                    >Home</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="rent.php"
+                                    >Rent</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    target="_blank"
+                                    href="buy.php"
+                                    rel="noopener noreferrer"
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    >Buy</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="commercial.php"
+                                    >Commercial</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="management.php"
+                                    >Management</a
+                                >
+                            </div>
+                            <div class="css-jilke5">
+                                <a
+                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    href="contact.php"
+                                    >Contact</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Menu End -->
        
 
 

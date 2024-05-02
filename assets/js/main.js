@@ -126,13 +126,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to toggle the visibility of the hamburger menu
     function toggleMenu() {
         hamMenu.style.transform = 'translateX(0px)'; // Hide the menu
-        hamContent.style.zIndex = 101;
+        hamContent.style.width = "100vw";
         hamburgerMenu.style.display = "none";
     }
 
     function disableMenu() {
         hamMenu.style.transform = 'translateX(390px)';
-        hamContent.style.zIndex = 0;
+        hamContent.style.width = "0vw";
         hamburgerMenu.style.display = "flex";
     }
 
