@@ -800,7 +800,8 @@ body.dark-theme{
   display: flex;
   flex-wrap: wrap;
   margin-top: 80px; /* Adjust as needed */
-  gap: 8px;
+  row-gap: 15px;
+  column-gap: 3px;
 }
 
 .grid__item{
