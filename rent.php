@@ -123,29 +123,22 @@
                 if ($result->num_rows > 0) {
                     // Output data of each row
                     while ($row = $result->fetch_assoc()) {
-                        echo "<article class='popular__card swiper-slide'>";
-                        echo "<img src='" . $row["image"] . "' alt='' class='popular__img'>";
+                        echo "<article class='nft'>";
+                        echo "<div class='popular__card  swiper-slide'>";
+                        echo "<div class='card-hover__content'>";
+                        echo "<h3 class='card-hover__title'>";
+                        echo "<span>" . $row["title"] . "</span>";
+                        echo "</h3>";
                         echo "<div class='popular__data'>";
-                        echo "<h2 class='popular__price'>";
-                        echo "<span>RF </span>" . $row["price"] . "<span> PCM</span>";
-                        echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
-                        echo "</h2>";
-                        echo "<h3 class='popular__title'>" . $row["title"] . "</h3>";
-                        echo "<div class='popular__container2'>";
+                        echo "<div class='popular__container'>";
                         echo "<div class='popular__description'>";
-                        echo "ADDRESS LINE 1 <BR>";
-                        echo "ADDRESS LINE 2 <BR>";
-                        echo "CITY <BR>";
-                        echo "TOWN <BR>";
-                        echo "POSTCODE <BR>";
+                        echo "ADDRESS LINE 1 <br />ADDRESS LINE 2 <br />CITY <br />TOWN";
+                        echo "<br />POSTCODE <br />";
                         echo "</div>";
                         echo "<div class='popular__description2'>";
                         echo $row["bedroom"] . "..<i class='fa fa-bed' aria-hidden='true'></i><br>";
                         echo $row["bathroom"] . "....<i class='fa-solid fa-toilet'></i><br>";
 
-                        
-                        
-                        // Display icons based on keywords
                         $keywords = explode(',', $row['keywords']);
                         foreach ($keywords as $keyword) {
                             $keyword = trim($keyword);
@@ -157,9 +150,14 @@
                                 echo "<i class='bx bxs-car-garage'></i><br>";
                             }
                         }
-                        
+
                         echo "</div>";
                         echo "</div>";
+                        echo "</div>";
+                        echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
+                        echo "</div>";
+                        echo "<div class='card-price'><span>RF </span>" . $row["price"] . "<span> PCM</span></div>";
+                        echo "<img src='"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";
                     }
