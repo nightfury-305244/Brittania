@@ -16,11 +16,11 @@
   --text-color: #1d3853;
   --text-color-light: hsl(226, 25%, 90%);
   --border-color: hsl(228, 99%, 98%);
-  --body-color: #fbfcf6 ;
+  --body-color: #f2f3e9 ;
   --container-color: #e6dcdc8b;
   --popular__container-color: #fff;
-  --home-color:  linear-gradient(177deg, #23c686 28%, #fbfcf6 90%);
-  --home-org-color: linear-gradient(177deg, #23c686 28%, #fbfcf6 83%);
+  --home-color:  linear-gradient(177deg, #60b467 28%, #f2f3e9 90%);
+  --home-org-color: linear-gradient(177deg, #60b467 28%, #f2f3e9 83%);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -121,8 +121,8 @@ body.dark-theme{
   --body-color: #1d3853 ;
   --container-color: hsl(228, 16%, 12%);
   --popular_container-color: hsl(228, 16%, 12%);
-  --home-color:  linear-gradient(177deg, #23c686 28%, #1d385357 89%);
-  --home-org-color: linear-gradient(177deg, #fbfcf6 28%, #fbfcf6 83%);
+  --home-color:  linear-gradient(177deg, #4da44b 28%, #1d385357 89%);
+  --home-org-color: linear-gradient(177deg, #f2f3e9 28%, #f2f3e9 83%);
 }
 
 /*========== 
