@@ -21,6 +21,8 @@
   --popular__container-color: #fff;
   --home-color:  linear-gradient(177deg, #60b467 28%, #f2f3e9 90%);
   --home-org-color: linear-gradient(177deg, #60b467 28%, #f2f3e9 83%);
+  --hamburger-bg-color: #58a75f;
+  --card-shine-color: #61606017;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -123,6 +125,8 @@ body.dark-theme{
   --popular_container-color: hsl(228, 16%, 12%);
   --home-color:  linear-gradient(177deg, #4da44b 28%, #1d385357 89%);
   --home-org-color: linear-gradient(177deg, #f2f3e9 28%, #f2f3e9 83%);
+  --hamburger-bg-color: #2a3169;
+  --card-shine-color: #ffffff29;
 }
 
 /*========== 
@@ -293,7 +297,7 @@ body.dark-theme{
   max-height: 100vh;
   color: inherit;
   height: 100%;
-  background-color: #2a3169;
+  background-color: var(--hamburger-bg-color);
   outline: transparent solid 2px;
   border-radius: 20px 0px 0px 20px;
   position: fixed;
@@ -360,12 +364,14 @@ body.dark-theme{
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .css-1f2qzn3 {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  width: 100%;
+  gap: 30px;
 }
 
 .css-1gj4t3y {
@@ -377,21 +383,27 @@ body.dark-theme{
   color: #ffffff;
 }
 
-.css-jilke5 {
-  display: flex;
-  align-self: center;
-  cursor: pointer;
+.css-jilke5:hover .BurgerMenu_BurgerMenu{
+  color: rgb(251, 211, 101);
+  transform: scale(1.15);
 }
 
-.BurgerMenu_BurgerMenu__item__tdNjN {
+.BurgerMenu_BurgerMenu{
   position: relative;
   text-decoration: none;
+  text-align: center;
   color: #fefdff;
   font-size: 18px;
-  line-height: 23px;
+  line-height: 40px;
   font-weight: 400;
+  height: fit-content;
   text-transform: capitalize;
-  align-items: center;
+}
+
+.BurgerMenu_BurgerMenu:hover {
+  color: rgb(251, 211, 101);
+  font-size: 20px;
+  transition: 0.2s;
 }
 
 /* Media Query for Responsive Navigation */
@@ -736,12 +748,13 @@ body.dark-theme{
 .popular__description2 {
   order: 2; /* Place on the left */
   font-size: var(--small-font-size);
+  text-align: end;
 }
 
 .popular__card::before {
   position: fixed;
   content: "";
-  box-shadow: 0 0 100px 40px #ffffff08;
+  box-shadow: 0 0 100px 50px var(--card-shine-color);
   top: -10%;
   left: -100%;
   transform: rotate(-45deg);
@@ -1605,7 +1618,7 @@ color: var(--text-color);
   overflow: hidden;
   transition: 0.5s all;
 }
-.nft ::before {
+.nft::before {
   position: fixed;
   content: "";
   box-shadow: 0 0 100px 40px #ffffff08;

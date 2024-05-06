@@ -303,50 +303,38 @@ hamburger.addEventListener('click', () => {
                             </a>
                         </div>
                         <div class="css-1f2qzn3">
-                            <div class="css-jilke5">
                                 <a
-                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="index.php"
                                     >Home</a
                                 >
-                            </div>
-                            <div class="css-jilke5">
                                 <a
-                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="rent.php"
                                     >Rent</a
                                 >
-                            </div>
-                            <div class="css-jilke5">
                                 <a
                                     target="_blank"
                                     href="buy.php"
                                     rel="noopener noreferrer"
-                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    class="BurgerMenu_BurgerMenu"
                                     >Buy</a
                                 >
-                            </div>
-                            <div class="css-jilke5">
                                 <a
-                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="commercial.php"
                                     >Commercial</a
                                 >
-                            </div>
-                            <div class="css-jilke5">
                                 <a
-                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="management.php"
                                     >Management</a
                                 >
-                            </div>
-                            <div class="css-jilke5">
                                 <a
-                                    class="BurgerMenu_BurgerMenu__item__tdNjN"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="contact.php"
                                     >Contact</a
                                 >
-                            </div>
                         </div>
                     </div>
                 </div>
