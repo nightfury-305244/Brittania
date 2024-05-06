@@ -130,15 +130,21 @@
                         echo "<span>" . $row["title"] . "</span>";
                         echo "</h3>";
                         echo "<div class='popular__data'>";
-                        echo "<div class='popular__container'>";
+                        echo "<div class='popular__container2'>";
                         echo "<div class='popular__description'>";
-                        echo "ADDRESS LINE 1 <br />ADDRESS LINE 2 <br />CITY <br />TOWN";
-                        echo "<br />POSTCODE <br />";
+                        echo "ADDRESS LINE 1 <BR>";
+                        echo "ADDRESS LINE 2 <BR>";
+                        echo "CITY <BR>";
+                        echo "TOWN <BR>";
+                        echo "POSTCODE <BR>";
                         echo "</div>";
                         echo "<div class='popular__description2'>";
                         echo $row["bedroom"] . "..<i class='fa fa-bed' aria-hidden='true'></i><br>";
                         echo $row["bathroom"] . "....<i class='fa-solid fa-toilet'></i><br>";
 
+                        
+                        
+                        // Display icons based on keywords
                         $keywords = explode(',', $row['keywords']);
                         foreach ($keywords as $keyword) {
                             $keyword = trim($keyword);
