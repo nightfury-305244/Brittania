@@ -271,7 +271,7 @@
                         </div>
                         <div class="css-1f2qzn3">
                                 <a
-                                    class="BurgerMenu_BurgerMenu"
+                                    class="BurgerMenu_BurgerMenu BurgerMenu_Selected"
                                     href="index.php"
                                     >Home</a
                                 >

@@ -115,7 +115,7 @@ button {
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
-  --first-color: hsl(254, 98%, 34%);
+  --first-color: hsl(228, 8%, 95%);
   --second-color: hsl(243, 92%, 34%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(225, 17%, 95%);
@@ -400,6 +400,11 @@ body.dark-theme{
   text-transform: capitalize;
 }
 
+.BurgerMenu_Selected {
+  color: rgb(251, 211, 101);
+  font-size: 20px;
+}
+
 .BurgerMenu_BurgerMenu:hover {
   color: rgb(251, 211, 101);
   font-size: 20px;
@@ -448,6 +453,7 @@ body.dark-theme{
   /* Optional: Adjust styles for active link */
   .nav__link.active {
     font-weight: bold; /* Make active link bold */
+    font-size: larger;
     color: var(--first-color)
   }
 }

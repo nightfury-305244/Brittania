@@ -309,7 +309,7 @@ hamburger.addEventListener('click', () => {
                                     >Home</a
                                 >
                                 <a
-                                    class="BurgerMenu_BurgerMenu"
+                                    class="BurgerMenu_BurgerMenu BurgerMenu_Selected"
                                     href="rent.php"
                                     >Rent</a
                                 >
