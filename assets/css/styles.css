@@ -895,12 +895,17 @@ body.dark-theme{
 }
 /* RENT */
 
+.card_view__container{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
 
 /* Grid Containers */
 .grid__container {
   display: flex;
   flex-wrap: wrap;
-  padding: 80px 0;
+  padding: 80px 10px;
   row-gap: 15px;
   column-gap: 3px;
   justify-content: space-around;
@@ -1614,4 +1619,34 @@ color: var(--text-color);
 .nft:hover ::before {
   top: -100%;
   left: 200%;
+}
+
+.pagination {
+  display: inline-block;
+  padding: 0 45px;
+}
+
+.pagination a {
+  color: var(--text-color);
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.disable {
+  pointer-events: none;
+  color: gray; /* Adjust color as needed */
+  cursor: not-allowed;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
 }

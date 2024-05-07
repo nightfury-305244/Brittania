@@ -104,30 +104,31 @@
             
             <!-- Properties-->
             <!-- RESPONSIVE GRID-->
-            <div class="grid__container">
+            <div class="card_view__container">
 
             <?php
 
                 require 'db_connection.php';
 
                 // Pagination
-                $limit = 24; // Number of records to display per page
+                $results_per_page = 15; // Number of records to display per page
                 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
-                $start = ($page - 1) * $limit; // Calculate the starting index for the records
+                $start = ($page - 1) * $results_per_page; // Calculate the starting index for the records
 
                 // Get the total number of column
                 $sql_count = "SELECT COUNT(*) as count FROM property WHERE b_r_c = 'Rent' AND available = 'A'";
                 $total_records = $conn->query($sql_count)->fetch_row()[0];
-                $total_pages = ceil($total_records / $limit);
+                $total_pages = ceil($total_records / $results_per_page);
 
                 // Fetch records with pagination
-                $sql = "SELECT * FROM property WHERE b_r_c = 'Rent' AND available = 'A' LIMIT $start, $limit";
+                $sql = "SELECT * FROM property WHERE b_r_c = 'Rent' AND available = 'A' LIMIT $start, $results_per_page";
                 $result = $conn->query($sql);
 
 
                  // Display data
                 if ($result->num_rows > 0) {
                     // Output data of each row
+                        echo "<div class='grid__container'>";
                     while ($row = $result->fetch_assoc()) {
                         echo "<article class='nft'>";
                         echo "<div class='popular__card  swiper-slide'>";
@@ -173,20 +174,37 @@
                         echo "</div>";
                         echo "</article>";
                     }
+                    echo "</div>";
                     
 
-                    echo "total_pages: " . $total_pages;
-                    echo "total_records: " . $total_records;
-                    echo "limit: " . $limit;
-    
-                    if ($total_pages > 1) {
-                        echo "<div class='pagination'>";
-                        for ($i = 1; $i <= $total_pages; $i++) {
-                            $active_class = ($i == $page) ? 'active' : '';
-                            echo "<a href='rent.php?page=$i' class='pagination__link $active_class'>$i</a>";
-                        }
-                        echo "</div>";
+                    echo "<div class='pagination'>";
+                    if ($page > 1)
+                        echo "<a href='rent.php?page=". $page-1 ."'>&laquo;</a>";
+                    else 
+                        echo "<a class='disable' href='rent.php?page=". $page-1 ."'>&laquo;</a>";
+
+                    if ($page > 3){
+                        echo "<a href='rent.php?page=1'>1</a>";
+                        echo "<a>...</a>";
                     }
+
+                    if ($page-1 > 0) {echo "<a href='rent.php?page=". $page-1 ."'>". $page-1 ."</a>";}
+
+                    echo "<a class='active' href='rent.php?page=". $page ."'>". $page ."</a>";
+
+                    if ($page+1 < $total_pages+1) {echo "<a href='rent.php?page=". $page+1 ."'>". $page+1 ."</a>";}
+
+                    if ($page < $total_pages-2) {
+                        echo "<a>...</a>";
+                        echo "<a href='rent.php?page=". $total_pages ."'>". $total_pages ."</a>";
+                    }
+
+                    if ($page < $total_pages)
+                        echo "<a href='rent.php?page=". $page+1 ."'>&raquo;</a>";
+                    else
+                        echo "<a class='disable' href='rent.php?page=". $page+1 ."'>&raquo;</a>";
+
+                    echo "</ul>";
                 } else {
                     echo "0 results";
                 }
@@ -196,49 +214,7 @@
 
             ?></div> 
             <!-- RESPOSNIVE GRID END-->
-            <!-- Properties-->
-            
-
-            
-            <button id="view-more-button">View More</button>
-
-            
-
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var page = <?php echo isset($_GET['page']) ? $_GET['page'] : 1; ?>; // Initial page number from URL parameter
-                var limit = 24; // Number of records to show per page
-                var records = document.querySelectorAll('.popular__card');
-
-                // Function to display records for the current page
-                function showRecordsForPage() {
-                    var startIndex = (page - 1) * limit;
-                    var endIndex = startIndex + limit;
-
-                    // Display records for the current page
-                    for (var i = 0; i < records.length; i++) {
-                        if (i >= startIndex && i < endIndex) {
-                            records[i].style.display = 'block';
-                        } else {
-                            records[i].style.display = 'none';
-                        }
-                    }
-
-                    // Toggle visibility of "View More" button based on remaining records
-                    var hasMoreRecords = endIndex < records.length;
-                    document.getElementById('view-more-button').style.display = hasMoreRecords ? 'block' : 'none';
-                }
-
-                // Event listener for "View More" button click
-                document.getElementById('view-more-button').addEventListener('click', function() {
-                    page++; // Increment page number
-                    showRecordsForPage(); // Display records for the updated page
-                });
-
-                // Initially display records for the first page
-                showRecordsForPage();
-            });
-        </script>
+            <!-- Properties-->            
 
 
 <script>
