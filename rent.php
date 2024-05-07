@@ -19,7 +19,7 @@
     </head>
     <body>
     <header class="header" id="header">
-    <nav class="nav">
+        <nav class="nav">
             <a href="index.php" class="nav__logo">
                 Brittania Estates <i class="bx bxs-home-alt-2"></i>
             </a>
@@ -73,7 +73,7 @@
                 </a>
             </div>
         </nav>
-</header>
+    </header>
 
         <!--==================== MAIN ====================-->
         <main class="main">
@@ -112,12 +112,18 @@
 
                 // Pagination
                 $limit = 24; // Number of records to display per page
-                $page = isset($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
+                $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
                 $start = ($page - 1) * $limit; // Calculate the starting index for the records
+
+                // Get the total number of column
+                $sql_count = "SELECT COUNT(*) as count FROM property WHERE b_r_c = 'Rent' AND available = 'A'";
+                $total_records = $conn->query($sql_count)->fetch_row()[0];
+                $total_pages = ceil($total_records / $limit);
 
                 // Fetch records with pagination
                 $sql = "SELECT * FROM property WHERE b_r_c = 'Rent' AND available = 'A' LIMIT $start, $limit";
                 $result = $conn->query($sql);
+
 
                  // Display data
                 if ($result->num_rows > 0) {
@@ -167,9 +173,11 @@
                         echo "</div>";
                         echo "</article>";
                     }
-                    // Pagination links
-                    $total_records = $result->num_rows;
-                    $total_pages = ceil($total_records / $limit);
+                    
+
+                    echo "total_pages: " . $total_pages;
+                    echo "total_records: " . $total_records;
+                    echo "limit: " . $limit;
     
                     if ($total_pages > 1) {
                         echo "<div class='pagination'>";

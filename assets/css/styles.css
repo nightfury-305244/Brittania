@@ -479,14 +479,6 @@ body.dark-theme{
   color: var(--title-color);
 }
 
-/* Active link */
-.active-link{
-  background: linear-gradient(101deg,
-              hsl(228, 66%, 53%),
-              hsl(228, 66%, 47%));
-  color: #fff;
-  box-shadow: 0 4px 8px hsla(228, 66%, 45%, .25);
-}
 
 /*=============== HOME ===============*/
 .home{
@@ -764,7 +756,7 @@ body.dark-theme{
   top: -10%;
   left: -100%;
   transform: rotate(-45deg);
-  height: 60rem;
+  height: 100rem;
   transition: 0.7s all;
 }
 
@@ -908,7 +900,7 @@ body.dark-theme{
 .grid__container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 80px; /* Adjust as needed */
+  padding: 80px 0;
   row-gap: 15px;
   column-gap: 3px;
   justify-content: space-around;
@@ -1425,12 +1417,6 @@ color: var(--text-color);
     display: inline-block;
   }
 
-  .active-link{
-    background: none;
-    box-shadow: none;
-    color: var(--first-color);
-    font-weight: var(--font-medium);
-  }
 
   .change-theme{
     text-align: right;
@@ -1440,10 +1426,6 @@ color: var(--text-color);
   .scroll-header .nav__link,
   .scroll-header .change-theme{
     color: var(--text-color);
-  }
-
-  .scroll-header .active-link{
-    color: var(--first-color);
   }
 
   .home{
@@ -1623,16 +1605,6 @@ color: var(--text-color);
   border: 1px solid #ffffff22;
   overflow: hidden;
   transition: 0.5s all;
-}
-.nft::before {
-  position: fixed;
-  content: "";
-  box-shadow: 0 0 100px 40px #ffffff08;
-  top: -10%;
-  left: -100%;
-  transform: rotate(-45deg);
-  height: 60rem;
-  transition: 0.7s all;
 }
 .nft:hover {
   border: 1px solid #ffffff44;

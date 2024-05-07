@@ -34,7 +34,7 @@
                 <div class="nav__menu">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="index.php" class="nav__link active-link">
+                            <a href="index.php" class="nav__link active">
                                 <i class='bx bx-home-alt-2' ></i>
                                 <span>Home</span>
                             </a>
