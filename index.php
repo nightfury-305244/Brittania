@@ -92,7 +92,7 @@
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
-            <!-- <section class="home section" id="home">
+            <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__data">
                         <h1 class="home__title">
@@ -113,9 +113,9 @@
                     </div>
                 </div>
                 
-            </section> -->
+            </section>
 
-            <section class="home_page">
+            <!-- <section class="home_page">
                 <div class="section_bg section_bg_right"></div>
                 <div class="page_container">
                     <div class="page_container_text home__text">
@@ -132,7 +132,7 @@
                         <img src="assets/img/slider-img.png" alt="Appartment Image">
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <!--==================== VALUE ====================-->
             <section class="value section" id="value">
