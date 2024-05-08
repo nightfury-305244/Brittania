@@ -78,7 +78,7 @@
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
-            <section class="home section" id="home">
+            <!-- <section class="home   " id="home">
                 <div class="home__container container grid">
                     <div class="home__data">
                         <h1 class="home__title">
@@ -99,6 +99,20 @@
                     </div>
                 </div>
                 
+            </section> -->
+
+            <section class="rent_page">
+                <div class="section_bg section_bg_right"></div>
+                <div class="page_container">
+                    <div class="page_container_text">
+                        <h1 class="home__title">
+                            Discover Your Next Home
+                        </h1>
+                        <p class="home__description">
+                            Find a home that matches your needs.
+                        </p>
+                    </div>
+                </div>
             </section>
 
             
@@ -358,19 +372,5 @@ hamburger.addEventListener('click', () => {
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
 
-
-        <!-- Hamburger Menu JavaScript -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Select the hamburger icon and menu container
-                const hamburger = document.querySelector('.hamburger');
-                const hamMenu = document.querySelector('.ham__menu');
-
-                // Toggle menu visibility when hamburger icon is clicked
-                hamburger.addEventListener('click', function() {
-                    hamMenu.classList.toggle('open');
-                });
-            });
-        </script>
     </body>
 </html>

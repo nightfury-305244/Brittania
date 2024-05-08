@@ -92,7 +92,7 @@
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
-            <section class="home section" id="home">
+            <!-- <section class="home section" id="home">
                 <div class="home__container container grid">
                     <div class="home__data">
                         <h1 class="home__title">
@@ -113,6 +113,25 @@
                     </div>
                 </div>
                 
+            </section> -->
+
+            <section class="home_page">
+                <div class="section_bg section_bg_right"></div>
+                <div class="page_container">
+                    <div class="page_container_text home__text">
+                        <h1 class="home__title">
+                            Discover Your Ideal Property
+                        </h1>
+                        <p class="home__description">
+                            Explore the ultimate destination for finding your dream property in Rwanda with Brittania, a British based company. <br>
+                            Whether you're searching for rentals or looking to buy, our platform offers a seamless experience tailored to your needs.<br>
+                            With Brittania, your search for the perfect living space in Rwanda is made effortless and enjoyable.
+                        </p>
+                    </div>
+                    <div class="home__images">
+                        <img src="assets/img/slider-img.png" alt="Appartment Image">
+                    </div>
+                </div>
             </section>
 
             <!--==================== VALUE ====================-->
