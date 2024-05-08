@@ -111,7 +111,7 @@
                 require 'db_connection.php';
 
                 // Pagination
-                $results_per_page = 15; // Number of records to display per page
+                $results_per_page = 20; // Number of records to display per page
                 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
                 $start = ($page - 1) * $results_per_page; // Calculate the starting index for the records
 
@@ -146,8 +146,8 @@
                         echo "POSTCODE <BR>";
                         echo "</div>";
                         echo "<div class='popular__description2'>";
-                        echo $row["bedroom"] . "..<i class='fa fa-bed' aria-hidden='true'></i><br>";
-                        echo $row["bathroom"] . "....<i class='fa-solid fa-toilet'></i><br>";
+                        echo "<div class='popular__description2_item'><span>". $row["bedroom"] . "</span><i class='fa fa-bed' aria-hidden='true'></i></div>";
+                        echo "<div class='popular__description2_item'><span>". $row["bathroom"] . "</span><i class='fa-solid fa-toilet'></i></div>";
 
                         
                         
@@ -156,11 +156,11 @@
                         foreach ($keywords as $keyword) {
                             $keyword = trim($keyword);
                             if ($keyword == 'garden') {
-                                echo "<i class='fa-solid fa-tree'></i><br>";
+                                echo "<div class='popular__description2_item'><span></span><i class='fa-solid fa-tree'></i></div>";
                             } elseif ($keyword == 'Pool') {
-                                echo "<i class='fa-solid fa-person-swimming'></i><br>";
+                                echo "<div class='popular__description2_item'><span></span><i class='fa-solid fa-person-swimming'></i></div>";
                             } elseif ($keyword == 'garage') {
-                                echo "<i class='bx bxs-car-garage'></i><br>";
+                                echo "<div class='popular__description2_item'><span></span><i class='bx bxs-car-garage'></i></div>";
                             }
                         }
 
