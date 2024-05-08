@@ -93,7 +93,7 @@
                     <div class="home__images">
                         <div class="home__orbe"></div>
 
-                        <div class="home__img">
+                        <div class="home__img ">
                             <img src="assets/img/home.png" alt="">
                         </div>
                     </div>

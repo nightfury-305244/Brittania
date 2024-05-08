@@ -20,7 +20,6 @@
   --container-color: #e6dcdc8b;
   --popular__container-color: #fff;
   --home-color:  linear-gradient(177deg, #60b467 28%, #f2f3e9 90%);
-  --home-org-color: linear-gradient(177deg, #60b467 28%, #f2f3e9 83%);
   --hamburger-bg-color: #58a75f;
   --card-shine-color: #61606017;
 
@@ -124,7 +123,6 @@ body.dark-theme{
   --container-color: hsl(228, 16%, 12%);
   --popular_container-color: hsl(228, 16%, 12%);
   --home-color:  linear-gradient(177deg, #4da44b 28%, #1d385357 89%);
-  --home-org-color: linear-gradient(177deg, #f2f3e9 28%, #f2f3e9 83%);
   --hamburger-bg-color: #2a3169;
   --card-shine-color: #ffffff29;
 }
@@ -401,14 +399,12 @@ body.dark-theme{
 }
 
 .BurgerMenu_Selected {
-  color: rgb(251, 211, 101);
   font-size: 20px;
 }
 
-.BurgerMenu_BurgerMenu:hover {
-  color: rgb(251, 211, 101);
-  font-size: 20px;
-  transition: 0.2s;
+.BurgerMenu_BurgerMenu:hover, .BurgerMenu_Selected{
+  color: #fefdff;
+  text-shadow: 0 0 10px #fefdff, 0 0 20px #fefdff, 0 0 30px var(--hamburger-bg-color), 0 0 40px var(--hamburger-bg-color), 0 0 50px var(--hamburger-bg-color), 0 0 60px var(--hamburger-bg-color), 0 0 70px var(--hamburger-bg-color);
 }
 
 /* Media Query for Responsive Navigation */
@@ -562,7 +558,7 @@ body.dark-theme{
 .home__orbe{
   width: 265px;
   height: 284px;
-  background: var(--home-org-color);
+  background: transparent;
   border-radius: 135px 135px 0 0;
 }
 
@@ -768,10 +764,10 @@ body.dark-theme{
 .popular__card::before {
   position: fixed;
   content: "";
-  box-shadow: 0 0 100px 50px var(--card-shine-color);
-  top: -10%;
-  left: -100%;
-  transform: rotate(-45deg);
+  box-shadow: 0 0 85px 49px var(--card-shine-color);
+  top: 18%;
+  left: -187%;
+  transform: rotate(-31deg);
   height: 100rem;
   transition: 0.7s all;
 }
