@@ -36,7 +36,7 @@
                         </li>
 
                         <li class="nav__item">
-                            <a href="rent.php" class="nav__link active">
+                            <a href="rent.php" class="nav__link">
                                 <i class='bx bx-building-house' ></i>
                                 <span>Rent</span>
                             </a>
@@ -147,7 +147,7 @@
                         <!-- Product info -->
                         <div class="product-info">
                             <h3><?php echo $row['title']; ?></h3>
-                            <h5>Price: RF <?php echo $row['price']; ?>  PCM</h5>
+                            <h5>Price: RF <?php echo $row['price']; ?></h5>
                             <p><?php echo $row['description']; ?></p>
 
                             <div>
@@ -271,7 +271,7 @@
                                     >Home</a
                                 >
                                 <a
-                                    class="BurgerMenu_BurgerMenu BurgerMenu_Selected"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="rent.php"
                                     >Rent</a
                                 >

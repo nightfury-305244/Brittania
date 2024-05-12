@@ -33,7 +33,7 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="rent.php" class="nav__link active">
+                        <a href="rent.php" class="nav__link">
                             <i class='bx bx-building-house'></i>
                             <span>Rent</span>
                         </a>
@@ -51,7 +51,7 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="management.php" class="nav__link">
+                        <a href="management.php" class="nav__link active">
                             <i class='bx bx-sitemap'></i>
                             <span>Management</span>
                         </a>
@@ -83,127 +83,46 @@
                 <div class="section_bg section_bg_right"></div>
                 <div class="page_container">
                     <div class="page_container_text">
-                        <h1 class="home__title rent_text">
-                            Discover Your Next Home
+                    <h1 class="home__title rent_text">
+                            Let Us Manage Your Property<br>
                         </h1>
                         <p class="home__description rent_text">
-                            Find a home that matches your needs.
+                            Whether it's to rent it out or sell it, we got it
                         </p>
+                        <a href="contact.php" class="contact_btn">
+                            <span>
+                            Contact Us
+                            </span>
+                            <span class="icon_span">
+                            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 331.64 322.79">
+                                <defs>
+                                <style>
+                                    .cls-1 {
+                                    isolation: isolate;
+                                    }
+                                </style>
+                                </defs>
+                                <title>right-arrow</title>
+                                <g class="cls-1">
+                                <path class="" d="M259.32,281.46H448.91l-70.75-70.74a13.44,13.44,0,0,1,0-17.69L408,163.73a12.05,12.05,0,0,1,17.68,0L574.38,312.42a12,12,0,0,1,0,17.68L425.69,478.79a12,12,0,0,1-17.68,0l-29.85-29.3a13.43,13.43,0,0,1,0-17.68l75.72-75.73H259.32a12.28,12.28,0,0,1-12.71-12.71V293.63a11.68,11.68,0,0,1,3.59-8.57A12.4,12.4,0,0,1,259.32,281.46Z" transform="translate(-246.61 -159.87)"></path>
+                                </g>
+                            </svg>
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="home__images">
+                        <div class="home__orbe"></div>
+
+                        <div class="home__img">
+                            <img src="assets/img/home.png" alt="">
+                        </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Properties-->
-            <!-- RESPONSIVE GRID-->
-            <div class="card_view__container">
-
-            <?php
-                require 'db_connection.php';
-
-                // Pagination
-                $results_per_page = 20; // Number of records to display per page
-                $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
-                $start = ($page - 1) * $results_per_page; // Calculate the starting index for the records
-
-                // Get the total number of column
-                $sql_count = "SELECT COUNT(*) as count FROM property WHERE b_r_c = 'Rent' AND available = 'A'";
-                $total_records = $conn->query($sql_count)->fetch_row()[0];
-                $total_pages = ceil($total_records / $results_per_page);
-
-                // Fetch records with pagination
-                $sql = "SELECT * FROM property WHERE b_r_c = 'Rent' AND available = 'A' LIMIT $start, $results_per_page";
-                $result = $conn->query($sql);
-
-                 // Display data
-                if ($result->num_rows > 0) {
-                    // Output data of each row
-                        echo "<div class='grid__container'>";
-                    while ($row = $result->fetch_assoc()) {
-                        echo "<article class='nft'>";
-                        echo "<div class='popular__card  swiper-slide'>";
-                        echo "<div class='card-hover__content'>";
-                        echo "<h3 class='card-hover__title'>";
-                        echo "<span>" . $row["title"] . "</span>";
-                        echo "</h3>";
-                        echo "<div class='popular__data'>";
-                        echo "<div class='popular__container2'>";
-                        echo "<div class='popular__description'>";
-                        echo "ADDRESS LINE 1 <BR>";
-                        echo "ADDRESS LINE 2 <BR>";
-                        echo "CITY <BR>";
-                        echo "TOWN <BR>";
-                        echo "POSTCODE <BR>";
-                        echo "</div>";
-                        echo "<div class='popular__description2'>";
-                        echo "<div class='popular__description2_item'><span>". $row["bedroom"] . "</span><i class='fa fa-bed' aria-hidden='true'></i></div>";
-                        echo "<div class='popular__description2_item'><span>". $row["bathroom"] . "</span><i class='fa-solid fa-toilet'></i></div>";
-
-                        // Display icons based on keywords
-                        $keywords = explode(',', $row['keywords']);
-                        foreach ($keywords as $keyword) {
-                            $keyword = trim($keyword);
-                            if ($keyword == 'garden') {
-                                echo "<div class='popular__description2_item'><span></span><i class='fa-solid fa-tree'></i></div>";
-                            } elseif ($keyword == 'Pool') {
-                                echo "<div class='popular__description2_item'><span></span><i class='fa-solid fa-person-swimming'></i></div>";
-                            } elseif ($keyword == 'garage') {
-                                echo "<div class='popular__description2_item'><span></span><i class='bx bxs-car-garage'></i></div>";
-                            }
-                        }
-
-                        echo "</div>";
-                        echo "</div>";
-                        echo "</div>";
-                        echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
-                        echo "</div>";
-                        echo "<div class='card-price'><span>RF </span>" . $row["price"] . "<span> PCM</span></div>";
-                        echo "<img src='"  . $row["image"] .  "' alt='' />";
-                        echo "</div>";
-                        echo "</article>";
-                    }
-                    echo "</div>";
-
-                    echo "<div class='pagination'>";
-                    if ($page > 1)
-                        echo "<a href='rent.php?page=". $page-1 ."'>&laquo;</a>";
-                    else 
-                        echo "<a class='disable' href='rent.php?page=". $page-1 ."'>&laquo;</a>";
-
-                    if ($page > 3){
-                        echo "<a href='rent.php?page=1'>1</a>";
-                        echo "<a>...</a>";
-                    }
-
-                    if ($page-1 > 0) {echo "<a href='rent.php?page=". $page-1 ."'>". $page-1 ."</a>";}
-
-                    echo "<a class='active' href='rent.php?page=". $page ."'>". $page ."</a>";
-
-                    if ($page+1 < $total_pages+1) {echo "<a href='rent.php?page=". $page+1 ."'>". $page+1 ."</a>";}
-
-                    if ($page < $total_pages-2) {
-                        echo "<a>...</a>";
-                        echo "<a href='rent.php?page=". $total_pages ."'>". $total_pages ."</a>";
-                    }
-
-                    if ($page < $total_pages)
-                        echo "<a href='rent.php?page=". $page+1 ."'>&raquo;</a>";
-                    else
-                        echo "<a class='disable' href='rent.php?page=". $page+1 ."'>&raquo;</a>";
-
-                    echo "</ul>";
-                } else {
-                    echo "0 results";
-                }
-    
-                // Close connection
-                $conn->close();
-
-            ?></div> 
-            <!-- RESPOSNIVE GRID END-->
-            <!-- Properties-->            
+            </section> 
 
 <script>
- const hamburger = document.querySelector('.hamburger');
+const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('.nav__list');
 
 hamburger.addEventListener('click', () => {
@@ -266,7 +185,7 @@ hamburger.addEventListener('click', () => {
                                     >Home</a
                                 >
                                 <a
-                                    class="BurgerMenu_BurgerMenu BurgerMenu_Selected"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="rent.php"
                                     >Rent</a
                                 >
@@ -281,7 +200,7 @@ hamburger.addEventListener('click', () => {
                                     >Commercial</a
                                 >
                                 <a
-                                    class="BurgerMenu_BurgerMenu"
+                                    class="BurgerMenu_BurgerMenu BurgerMenu_Selected"
                                     href="management.php"
                                     >Management</a
                                 >

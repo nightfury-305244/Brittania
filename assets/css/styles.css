@@ -23,6 +23,7 @@
   --home-body-color: linear-gradient(to right, rgb(134 185 113) 40%, rgb(76 175 80));
   --hamburger-bg-color: #58a75f;
   --card-shine-color: #61606017;
+  --contactbtn-color: #00a30f;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -128,6 +129,7 @@ body.dark-theme{
   --home-body-color: linear-gradient(177deg, #0c7964 36%, #294d7175 80%);
   --hamburger-bg-color: #2a3169;
   --card-shine-color: #ffffff29;
+  --contactbtn-color: hsl(225, 17%, 95%);
 }
 
 /*========== 
@@ -156,7 +158,6 @@ body.dark-theme{
 .dark-theme .value__accordion-arrow,
 .dark-theme .contact__orbe,
 .dark-theme .contact__card i,
-.dark-theme .contact__card-button,
 .dark-theme .subscribe__container
 .dark-theme .popular__container{
   background-color: var(--container-color);
@@ -476,8 +477,12 @@ body.dark-theme{
 
 .rent_page {
   position: relative;
-  padding: 30px 0;
+  padding: 75px 0;
   margin-top: 80px;
+}
+
+.rent_text {
+  color: #f1f2f3!important;
 }
 
 .section_bg {
@@ -497,9 +502,9 @@ body.dark-theme{
 
 .page_container {
   text-align: center;
-  padding: 0 30px;
+  padding: 0 0px 0 60px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
@@ -507,6 +512,8 @@ body.dark-theme{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .home{
@@ -602,35 +609,83 @@ body.dark-theme{
   border-radius: 125px 125px 12px 12px;
   display: inline-flex;
   align-items: flex-end;
-  bottom: -1.5rem;
+  bottom: -0.5rem;
   box-shadow: 0 16px 32px hsla(228, 66%, 25%, .25);
 }
 
 
 /*=============== BUTTON ===============*/
 
-.button{
-  display: inline-block;
-  background: linear-gradient(101deg,
-              hsl(111, 93%, 35%),
-              hsl(128, 81%, 25%));
-  color: #fff;
-  padding: 14px 28px;
-  border-radius: .5rem;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+.contact_btn{
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 225px;
+  padding: 10px 5px 10px 45px;
+  border-radius: 35px;
+  color: #ffffff;
+  background: linear-gradient(101deg, hsl(111, 93%, 35%), hsl(128, 81%, 25%));
   box-shadow: 0 4px 8px rgba(20, 77, 6, 0.588);
-  transition: .2s;
-  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 15px;
+  margin: 80px 0 40px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.button:hover{
-  box-shadow: 0 4px 12px rgba(23, 107, 16, 0.25);
+.contact_btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 0;
+  height: 100%;
+  background-color: #1d3853;
+  border-radius: 35px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
-.nav__button{
-  display: none;
+.contact_btn:hover::before {
+  width: 110%;
 }
+
+.contact_btn span{
+  z-index: 2;
+}
+
+.contact_btn .icon_span{
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: #0c731a;
+}
+
+.contact_btn svg {
+  width: 15px;
+  height: auto;
+  fill: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
 /*=============== POPULAR ===============*/
 .popular__container{
   padding: 1rem 0 5rem;
@@ -1157,25 +1212,40 @@ body.dark-theme{
   font-size: var(--smaller-font-size);
 }
 
-.contact__card-button{
-  font-size: var(--small-font-size);
-  padding: 14px 0;
-  width: 100%;
-  border-radius: .25rem;
-  background: var(--first-color-lighten);
-  color: hsl(111, 93%, 35%);
-  font-weight: var(--font-semi-bold);
-  box-shadow: none;
-}
-
-.contact__card-button:hover{
-  background-color: hsl(112, 94%, 26%);
-  color: #fff;
-}
-
 .contact__card-box:hover{
   box-shadow: 0 8px 24px hsla(228, 66%, 45%, .1);
 }
+
+.contact__card-button {
+  font-size: 1.13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--contactbtn-color);
+}
+
+.contact__card-button .button__arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 12px;
+  margin-left: 5px;
+  border-radius: 100%;
+}
+
+.contact__card-button .button__arrow svg {
+  width: 15px;
+  height: auto;
+  fill: var(--contactbtn-color);
+  position: relative;
+  z-index: 2;
+}
+
+.contact__card-button:hover .button__arrow {
+  transform: translateX(4px);
+}
+
 /*=============== SUBSCRIBE ===============*/
 .subscribe{
   padding: 2.5rem;
@@ -1501,10 +1571,6 @@ color: var(--text-color);
     padding: 7.5rem 0 1rem;
   }
 
-  .pagination{
-    justify-content: end;
-  }
-
   .section__title{
     font-size: 2.25rem;
   }
@@ -1556,11 +1622,6 @@ color: var(--text-color);
   .nav__link i{
     display: none;
   }
-
-  .nav__button{
-    display: inline-block;
-  }
-
 
   .change-theme{
     text-align: right;
@@ -1663,7 +1724,7 @@ color: var(--text-color);
   }
 
   .contact__card{
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, 230px);
   }
 
   .contact__card-box{

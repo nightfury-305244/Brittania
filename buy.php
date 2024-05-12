@@ -33,13 +33,13 @@
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="rent.php" class="nav__link active">
+                        <a href="rent.php" class="nav__link">
                             <i class='bx bx-building-house'></i>
                             <span>Rent</span>
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="buy.php" class="nav__link">
+                        <a href="buy.php" class="nav__link active">
                             <i class='bx bxs-bank'></i>
                             <span>Buy</span>
                         </a>
@@ -84,10 +84,10 @@
                 <div class="page_container">
                     <div class="page_container_text">
                         <h1 class="home__title rent_text">
-                            Discover Your Next Home
+                            Discover Your Dream Home
                         </h1>
                         <p class="home__description rent_text">
-                            Find a home that matches your needs.
+                            Find Your Ideal Home Today
                         </p>
                     </div>
                 </div>
@@ -106,12 +106,12 @@
                 $start = ($page - 1) * $results_per_page; // Calculate the starting index for the records
 
                 // Get the total number of column
-                $sql_count = "SELECT COUNT(*) as count FROM property WHERE b_r_c = 'Rent' AND available = 'A'";
+                $sql_count = "SELECT COUNT(*) as count FROM property WHERE b_r_c = 'Buy' AND available = 'A'";
                 $total_records = $conn->query($sql_count)->fetch_row()[0];
                 $total_pages = ceil($total_records / $results_per_page);
 
                 // Fetch records with pagination
-                $sql = "SELECT * FROM property WHERE b_r_c = 'Rent' AND available = 'A' LIMIT $start, $results_per_page";
+                $sql = "SELECT * FROM property WHERE b_r_c = 'Buy' AND available = 'A' LIMIT $start, $results_per_page";
                 $result = $conn->query($sql);
 
                  // Display data
@@ -156,7 +156,7 @@
                         echo "</div>";
                         echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
                         echo "</div>";
-                        echo "<div class='card-price'><span>RF </span>" . $row["price"] . "<span> PCM</span></div>";
+                        echo "<div class='card-price'><span>RF </span>" . $row["price"] . "</div>";
                         echo "<img src='"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";
@@ -165,30 +165,30 @@
 
                     echo "<div class='pagination'>";
                     if ($page > 1)
-                        echo "<a href='rent.php?page=". $page-1 ."'>&laquo;</a>";
+                        echo "<a href='Buy.php?page=". $page-1 ."'>&laquo;</a>";
                     else 
-                        echo "<a class='disable' href='rent.php?page=". $page-1 ."'>&laquo;</a>";
+                        echo "<a class='disable' href='Buy.php?page=". $page-1 ."'>&laquo;</a>";
 
                     if ($page > 3){
-                        echo "<a href='rent.php?page=1'>1</a>";
+                        echo "<a href='Buy.php?page=1'>1</a>";
                         echo "<a>...</a>";
                     }
 
-                    if ($page-1 > 0) {echo "<a href='rent.php?page=". $page-1 ."'>". $page-1 ."</a>";}
+                    if ($page-1 > 0) {echo "<a href='Buy.php?page=". $page-1 ."'>". $page-1 ."</a>";}
 
-                    echo "<a class='active' href='rent.php?page=". $page ."'>". $page ."</a>";
+                    echo "<a class='active' href='Buy.php?page=". $page ."'>". $page ."</a>";
 
-                    if ($page+1 < $total_pages+1) {echo "<a href='rent.php?page=". $page+1 ."'>". $page+1 ."</a>";}
+                    if ($page+1 < $total_pages+1) {echo "<a href='Buy.php?page=". $page+1 ."'>". $page+1 ."</a>";}
 
                     if ($page < $total_pages-2) {
                         echo "<a>...</a>";
-                        echo "<a href='rent.php?page=". $total_pages ."'>". $total_pages ."</a>";
+                        echo "<a href='Buy.php?page=". $total_pages ."'>". $total_pages ."</a>";
                     }
 
                     if ($page < $total_pages)
-                        echo "<a href='rent.php?page=". $page+1 ."'>&raquo;</a>";
+                        echo "<a href='Buy.php?page=". $page+1 ."'>&raquo;</a>";
                     else
-                        echo "<a class='disable' href='rent.php?page=". $page+1 ."'>&raquo;</a>";
+                        echo "<a class='disable' href='Buy.php?page=". $page+1 ."'>&raquo;</a>";
 
                     echo "</ul>";
                 } else {
@@ -266,13 +266,13 @@ hamburger.addEventListener('click', () => {
                                     >Home</a
                                 >
                                 <a
-                                    class="BurgerMenu_BurgerMenu BurgerMenu_Selected"
+                                    class="BurgerMenu_BurgerMenu"
                                     href="rent.php"
                                     >Rent</a
                                 >
                                 <a
                                     href="buy.php"
-                                    class="BurgerMenu_BurgerMenu"
+                                    class="BurgerMenu_BurgerMenu BurgerMenu_Selected"
                                     >Buy</a
                                 >
                                 <a
