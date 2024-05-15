@@ -79,17 +79,20 @@
         <main class="main">
             <!--==================== HOME ====================-->
 
-            <section class="rent_page">
-                <div class="section_bg section_bg_right"></div>
-                <div class="page_container">
-                    <div class="page_container_text">
-                        <h1 class="home__title rent_text">
-                            Looking For Your New Commercial Property? 
-                        </h1>
-                        <p class="home__description rent_text">
-                            Discover the best rates here
-                        </p>
+            <section class="page_header">
+                <div class="page_haeder_container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="page__title">
+                                Looking For Your New Commercial Property? 
+                            </h1>
+                            <p class="page__description">
+                                Discover the best rates here
+                            </p>
+                        </div>
                     </div>
+                    <ol class="breadcrumb">
+                    <li><a href="index.php" rel="nofollow">Home</a></li><li></li><li> &nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;&nbsp;&nbsp; </li><li>Buy Home</li>    </ol>
                 </div>
             </section>
 

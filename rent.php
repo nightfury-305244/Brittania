@@ -106,7 +106,7 @@
                         </div>
                     </div>
                     <ol class="breadcrumb">
-                    <li><a href="http://hompark.themezinho.net" rel="nofollow">Home</a></li><li></li><li> &nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;&nbsp;&nbsp; </li><li>Rent Home</li>    </ol>
+                    <li><a href="index.php" rel="nofollow">Home</a></li><li></li><li> &nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;&nbsp;&nbsp; </li><li>Rent Home</li>    </ol>
                 </div>
             </section>
 

@@ -79,17 +79,17 @@
         <main class="main">
             <!--==================== HOME ====================-->
 
-            <section class="rent_page">
-                <div class="section_bg section_bg_right"></div>
-                <div class="page_container">
-                    <div class="page_container_text">
-                    <h1 class="home__title rent_text">
-                            Let Us Manage Your Property<br>
-                        </h1>
-                        <p class="home__description rent_text">
+            <section class="page_header">
+                <div class="page_haeder_container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="page__title">
+                            Let Us Manage Your Property 
+                            </h1>
+                            <p class="page__description">
                             Whether it's to rent it out or sell it, we got it
-                        </p>
-                        <a href="contact.php" class="contact_btn">
+                            </p>
+                            <a href="contact.php" class="contact_btn">
                             <span>
                             Contact Us
                             </span>
@@ -109,17 +109,12 @@
                             </svg>
                             </span>
                         </a>
-                    </div>
-
-                    <div class="home__images">
-                        <div class="home__orbe"></div>
-
-                        <div class="home__img">
-                            <img src="assets/img/home.png" alt="">
                         </div>
                     </div>
+                    <ol class="breadcrumb">
+                    <li><a href="index.php" rel="nofollow">Home</a></li><li></li><li> &nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;&nbsp;&nbsp; </li><li>Buy Home</li>    </ol>
                 </div>
-            </section> 
+            </section>
 
 <script>
 const hamburger = document.querySelector('.hamburger');
