@@ -78,16 +78,20 @@
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__data">
-                        <h1 class="home__title">
-                            Contact Us<br>For Further information
-                        </h1>
-                        <p class="home__description">
-                            Get in contact now
-                        </p>   
+            <section class="page_header">
+                <div class="page_haeder_container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="page__title">
+                                Contact Us<br>For Further information
+                            </h1>
+                            <p class="page__description">
+                                Get in contact now
+                            </p>
+                        </div>
                     </div>
+                    <ol class="breadcrumb">
+                    <li><a href="index.php" rel="nofollow">Home</a></li><li></li><li> &nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;&nbsp;&nbsp; </li><li>Contact us</li>    </ol>
                 </div>
             </section>
 
