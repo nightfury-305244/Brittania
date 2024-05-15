@@ -79,7 +79,7 @@
         <main class="main">
             <!--==================== HOME ====================-->
 
-            <section class="rent_page">
+            <!-- <section class="rent_page">
                 <div class="section_bg section_bg_right"></div>
                 <div class="page_container">
                     <div class="page_container_text">
@@ -90,6 +90,23 @@
                             Find a home that matches your needs.
                         </p>
                     </div>
+                </div>
+            </section> -->
+
+            <section class="page_header">
+                <div class="page_haeder_container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="home__title rent_text">
+                                Discover Your Next Home
+                            </h1>
+                            <p class="home__description rent_text">
+                                Find a home that matches your needs.
+                            </p>
+                        </div>
+                    </div>
+                    <ol class="breadcrumb">
+                    <li><a href="http://hompark.themezinho.net" rel="nofollow">Home</a></li><li></li><li> &nbsp;&nbsp;&nbsp;&nbsp;»&nbsp;&nbsp;&nbsp;&nbsp; </li><li>Rent Home</li>    </ol>
                 </div>
             </section>
 
