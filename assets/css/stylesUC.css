@@ -16,8 +16,7 @@
   --body-color: #f2f3e9 ;
   --home_color: linear-gradient(135deg, #046a38 0%, #00B140 100%);
   --page_header-color: linear-gradient(80deg, #145233 26%, #0f6130 73%);
-  --page_header_link-color: #40b554;
-  --page_header_link_text-color: #673ab7;
+  --page_header_contactbtn-color: #00b140;
   --container-color: #e6dcdc8b;
   --popular__container-color: #fff;
   --hamburger-bg-color: #58a75f;
@@ -125,8 +124,7 @@ body.dark-theme{
   --container-color: hsl(228, 16%, 12%);
   --popular_container-color: hsl(228, 16%, 12%);
   --page_header-color: linear-gradient(161deg, #26282b 0%, #26282b 49%, #1d3853 100%);
-  --page_header_link-color: #343d71;
-  --page_header_link_text-color: #86b971;
+  --page_header_contactbtn-color: #2a3169;
   --home_color: linear-gradient(148deg, hsl(228, 16%, 12%) 0%, #1d3853 100%);
   --hamburger-bg-color: #2a3169;
   --card-shine-color: #ffffff29;
@@ -581,7 +579,7 @@ body.dark-theme{
   background-size: 2000px 1200px;
   position: relative;
   background-position: 0% 50%;    
-  margin-bottom: 50px;
+  margin-bottom: 85px;
 }
 
 .page_header::after {
@@ -627,12 +625,13 @@ body.dark-theme{
   position: absolute;
   left: 15px;
   bottom: -150px;
-  background: var(--page_header_link-color);
+  background: var(--body-color);
   width: calc(100% - 30px);
   padding: 35px 30px;
   padding-right: 60px;
   margin: 0;
   border-radius: 5px;
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.07);
 }
 
 .breadcrumb li {
@@ -640,11 +639,11 @@ body.dark-theme{
   font-size: 14px;
   font-weight: 600;
   padding: 0;
-  color: var(--page_header_link_text-color);
+  color: var(--title-color);
 }
 
 .breadcrumb li a {
-  color: #fff;
+  color: var(--text-color);
 }
 
 .breadcrumb li a:hover {
@@ -665,11 +664,10 @@ body.dark-theme{
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 225px;
-  padding: 10px 5px 10px 45px;
+  padding: 5px 5px 5px 30px;
   border-radius: 35px;
   color: #ffffff;
-  background: var(--page_header_link-color);
-  box-shadow: 0 4px 8px rgba(20, 77, 6, 0.588);
+  border: 2px solid var(--page_header_contactbtn-color);
   text-transform: uppercase;
   font-size: 15px;
   margin-top: 30px;
@@ -684,7 +682,7 @@ body.dark-theme{
   left: -5px;
   width: 0;
   height: 100%;
-  background-color: #1d3853;
+  background-color: var(--page_header_contactbtn-color);
   border-radius: 35px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -711,9 +709,9 @@ body.dark-theme{
   -ms-flex-align: center;
   align-items: center;
   width: 45px;
-  height: 45px;
+  height: 45px;  
   border-radius: 100%;
-  background-color: #22bd85;
+  background-color: var(--page_header_contactbtn-color);
 }
 
 .contact_btn svg {
@@ -942,7 +940,7 @@ body.dark-theme{
 }
 .nft:hover {
   border: 1px solid #ffffff44;
-  box-shadow: 0 7px 50px 10px #000000aa;
+  box-shadow: 0 2px 34px -1px #000000aa;
   transform: scale(1.015);
 }
 .nft:hover ::before {
