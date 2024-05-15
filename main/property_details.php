@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- FAVICON -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
     <!-- BOXICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- FontAwesome-->
     <script src="https://kit.fontawesome.com/0fa496f194.js" crossorigin="anonymous"></script>
     <!-- SWIPER CSS -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/prodstlyes.css">
+    <link rel="stylesheet" href="../assets/css/stylesUC.css">
+    <link rel="stylesheet" href="../assets/css/prodstlyes.css">
 
     <title>Brittania Estates</title>
 </head>
@@ -310,11 +310,11 @@
     </a>
 
     <!--=============== SCROLLREVEAL ===============-->
-    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="../assets/js/scrollreveal.min.js"></script>
     <!--=============== SWIPER JS ===============-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
     <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/details.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/details.js"></script>
 </body>
 </html>

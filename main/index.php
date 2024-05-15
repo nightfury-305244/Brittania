@@ -11,15 +11,15 @@
         <meta name="keywords" content="Rwanda, Buy, Rent, Let, House, Home, Finance">
 
         <!-- FAVICON -->
-        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
         <!-- BOXICONS -->
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <!-- SWIPER CSS -->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
         <!-- FontAwesome-->
         <script src="https://kit.fontawesome.com/0fa496f194.js" crossorigin="anonymous"></script>
         <!-- CSS -->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="../assets/css/stylesUC.css">
 
         <title>Brittania Estates</title>
     </head>
@@ -129,7 +129,7 @@
                             </p>
                         </div>
                         <div class="home__img">
-                            <img src="assets/img/home.png" alt="">
+                            <img src="../assets/img/home.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                         <div class="value__orbe"></div>
 
                         <div class="value__img">
-                            <img src="assets/img/popular 44.jpg" alt="">
+                            <img src="../assets/img/popular 44.jpg" alt="">
                         </div>
                     </div>
 
@@ -344,12 +344,12 @@
         </a>
 
         <!--=============== SCROLLREVEAL ===============-->
-        <script src="assets/js/scrollreveal.min.js"></script>
+        <script src="../assets/js/scrollreveal.min.js"></script>
 
         <!--=============== SWIPER JS ===============-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
+        <script src="../assets/js/swiper-bundle.min.js"></script>
 
         <!--=============== MAIN JS ===============-->
-        <script src="assets/js/main.js"></script>
+        <script src="../assets/js/main.js"></script>
     </body>
 </html>

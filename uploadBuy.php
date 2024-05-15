@@ -16,10 +16,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/stylesUC.css">
     <link rel="stylesheet" href="assets/css/stylesUC.css">
-    <title>Upload Property</title>
+    <title>Buy Upload</title>
 </head>
 <body>
-<h1>Upload Property</h1>
+<h1>Buy - Upload Property</h1>
 <form action="process_upload.php" method="post" enctype="multipart/form-data">
     <label for="title">Title:</label><br>
     <input type="text" style="text-transform: capitalize" id="title" name="title" required><br><br>
@@ -58,14 +58,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <select id="type" name="type" required>
         <option value="House">House</option>
         <option value="Apartment">Apartment</option>
-        <option value="Commercial">Commercial</option>
     </select><br><br>
     
     <label for="b_r_c">Buying/Renting/Commercial:</label><br>
     <select id="b_r_c" name="b_r_c" required>
         <option value="Buy">Buy</option>
-        <option value="Rent">Rent</option>
-        <option value="Commercial">Commercial</option>
     </select><br><br>
     
     <label for="available">Available:</label><br>
