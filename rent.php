@@ -97,10 +97,10 @@
                 <div class="page_haeder_container">
                     <div class="row">
                         <div class="col-12">
-                            <h1 class="home__title rent_text">
+                            <h1 class="page__title">
                                 Discover Your Next Home
                             </h1>
-                            <p class="home__description rent_text">
+                            <p class="page__description">
                                 Find a home that matches your needs.
                             </p>
                         </div>
@@ -118,7 +118,7 @@
                 require 'db_connection.php';
 
                 // Pagination
-                $results_per_page = 20; // Number of records to display per page
+                $results_per_page = 12; // Number of records to display per page
                 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
                 $start = ($page - 1) * $results_per_page; // Calculate the starting index for the records
 
