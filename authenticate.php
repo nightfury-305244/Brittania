@@ -7,7 +7,7 @@ ini_set('display_errors', 1);
 // Change this to your connection info.
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "login";
 
 // Try to connect to the database

@@ -115,7 +115,7 @@
             <div class="card_view__container">
 
             <?php
-                require '../db_connection.php';
+                require 'db_connection.php';
 
                 // Pagination
                 $results_per_page = 12; // Number of records to display per page

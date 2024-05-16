@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
 sr.reveal('.home__title, .popular__container, .subscribe__container, .footer__container, .contact_btn')
 sr.reveal('.home__description, .footer__info', {delay: 500})
 sr.reveal('.home__value', {delay: 700})
-sr.reveal('.home__images', {delay: 800, origin: 'bottom'})
+sr.reveal('.home__img', {delay: 800, origin: 'right'})
 sr.reveal('.logos__img', {interval: 100})
 sr.reveal('.value__images, .contact__content', {origin: 'left'})
 sr.reveal('.value__content, .contact__images', {origin: 'right'})
