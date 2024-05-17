@@ -34,7 +34,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
   </div>
 
   <div class="container">
-    <form class="jotform-form" method="post" enctype="multipart/form-data" name="form_container"
+    <form class="jotform-form" action="process_upload.php" method="post" enctype="multipart/form-data" name="form_container"
       id="form_container" accept-charset="utf-8" autocomplete="on">
       <div role="main" class="form-all">
         <ul class="form-section page-section">

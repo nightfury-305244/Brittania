@@ -36,7 +36,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
   </div>
 
   <div class="container">
-    <form class="jotform-form" method="post" enctype="multipart/form-data" name="form_container"
+    <form class="jotform-form" action="process_upload.php" method="post" enctype="multipart/form-data" name="form_container"
       id="form_container" accept-charset="utf-8" autocomplete="on">
       <div role="main" class="form-all">
         <ul class="form-section page-section">
@@ -52,14 +52,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_15" class="form-input-wide" data-layout="half"> <input type="text" id="title"
                 name="title" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:648px"
-                size="648" data-component="textbox" aria-labelledby="label_15" value="" required=""/> </div>
+                size="648" data-component="textbox" aria-labelledby="label_15" value="" /> </div>
           </li>
           <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_19"><label
               class="form-label form-label-top form-label-auto" id="label_19" for="price" aria-hidden="false"> Price
             </label>
             <div id="cid_19" class="form-input-wide" data-layout="half"> <input type="number" id="price"
                 name="price" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px"
-                size="310" data-component="textbox" aria-labelledby="label_19" value="" required=""/> </div>
+                size="310" data-component="textbox" aria-labelledby="label_19" value="" /> </div>
           </li>
           <li class="form-line" data-type="control_textarea" id="id_6"><label
               class="form-label form-label-top form-label-auto" id="label_6" for="description" aria-hidden="false">
@@ -89,7 +89,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         id="address_l1" name="address_l1" class="form-textbox form-address-line"
                         data-defaultvalue="" autoComplete="section-input_8 address-line1"
                         data-component="address_line_1" aria-labelledby="label_8 sublabel_8_addr_line1"
-                        value="" required=""/>
+                        value="" />
                         <label class="form-sub-label" for="address_l1" id="sublabel_8_addr_line1"
                         style="min-height:13px">Address Line 1</label>
                       </span>
@@ -102,7 +102,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         id="address_l2" name="address_l2" class="form-textbox form-address-line"
                         data-defaultvalue="" autoComplete="section-input_8 address-line2"
                         data-component="address_line_2" aria-labelledby="label_8 sublabel_8_addr_line2"
-                        value="" required=""/>
+                        value="" />
                       <label class="form-sub-label" for="address_l2" id="sublabel_8_addr_line2"
                         style="min-height:13px">Address Line 2</label>
                       </span>
@@ -114,7 +114,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                       <input type="text" id="city"
                         name="city" class="form-textbox form-address-city" data-defaultvalue=""
                         autoComplete="section-input_8 address-level2" data-component="city"
-                        aria-labelledby="label_8 sublabel_8_city" required="" value="" />
+                        aria-labelledby="label_8 sublabel_8_city"  value="" />
                         <label class="form-sub-label" for="city" id="sublabel_8_city" style="min-height:13px">City</label>
                     </span>
                   </span>
@@ -123,7 +123,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                       <input type="text" id="town"
                         name="town" class="form-textbox form-address-state" data-defaultvalue=""
                         autoComplete="section-input_8 address-level1" data-component="state"
-                        aria-labelledby="label_8 sublabel_8_state" required="" value="" /><label class="form-sub-label"
+                        aria-labelledby="label_8 sublabel_8_state"  value="" /><label class="form-sub-label"
                         for="town" id="sublabel_8_state" style="min-height:13px">Town</label>
                     </span>
                   </span>
@@ -134,7 +134,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                       <input type="number" id="postcode"
                         name="postcode" class="form-textbox form-address-postal" data-defaultvalue=""
                         autoComplete="section-input_8 postal-code" data-component="zip"
-                        aria-labelledby="label_8 sublabel_8_postal" required="" value="" />
+                        aria-labelledby="label_8 sublabel_8_postal"  value="" />
                       <label class="form-sub-label"
                         for="postcode" id="sublabel_8_postal" style="min-height:13px">Postal / Zip
                         Code</label>
@@ -165,14 +165,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_23" class="form-input-wide" data-layout="half"> <input type="number" id="bedroom"
                 name="bedroom" data-type="input-textbox" class="form-textbox" data-defaultvalue=""
-                style="width:310px" size="310" data-component="textbox" aria-labelledby="label_23" value="" required=""/> </div>
+                style="width:310px" size="310" data-component="textbox" aria-labelledby="label_23" value="" /> </div>
           </li>
           <li class="form-line form-line-column form-col-2" data-type="control_textbox" id="id_24"><label
               class="form-label form-label-top form-label-auto" id="label_24" for="bathroom" aria-hidden="false">
               Bathrooms </label>
             <div id="cid_24" class="form-input-wide" data-layout="half"> <input type="number" id="bathroom"
                 name="bathroom" data-type="input-textbox" class="form-textbox" data-defaultvalue=""
-                style="width:310px" size="310" data-component="textbox" aria-labelledby="label_24" value="" required=""/> </div>
+                style="width:310px" size="310" data-component="textbox" aria-labelledby="label_24" value="" /> </div>
           </li>
           <li class="form-line fixed-width form-line-column form-col-3" data-type="control_dropdown" id="id_25"><label
               class="form-label form-label-top form-label-auto" id="label_25" for="type" aria-hidden="false"> Type:

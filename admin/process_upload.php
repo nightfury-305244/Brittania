@@ -37,18 +37,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $available = $_POST['available'];
     $keywords = $_POST['keywords'];
 
-    if (!empty($_FILES['image']['tmp_name'])) {
-        // Specify the target directory for the uploaded image
-        $targetDir = "assets/img/";
-    
-        // Concatenate file path for the uploaded image
-        $imagePath = $targetDir . basename($_FILES['image']['name']);
-    
-        // Move the uploaded image to the desired location
-        if (move_uploaded_file($_FILES['image']['tmp_name'], $imagePath)) {
-            echo ".";
+    $uploadDir = 'assets/img/';
+
+    foreach ($_FILES['images']['name'] as $key => $name) {
+        // Check for errors
+        if ($_FILES['images']['error'][$key] == UPLOAD_ERR_OK) {
+            // Get the file's temporary location
+            $tmpName = $_FILES['images']['tmp_name'][$key];
+
+            $imagePath =  $uploadDir . basename($name);
+
+            // Move the file to the upload directory
+            if (move_uploaded_file($tmpName, "../" . $imagePath)) {
+                echo "File {$name} uploaded successfully.";
+            } else {
+                echo "Failed to upload file {$name}.";
+            }
         } else {
-            echo "Error uploading Featured image.";
+            echo "Error uploading file {$name}.";
         }
     }
 
@@ -72,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $imagePath
     );
 
-    // Execute SQL statement for property insertion
+    //Execute SQL statement for property insertion
     if ($stmt->execute()) {
         // Get the ID of the inserted property
         $property_id = $stmt->insert_id;
@@ -80,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Loop through uploaded images
         foreach ($_FILES['images']['tmp_name'] as $key => $tmpName) {
             if (!empty($tmpName)) {
-                $additionalImagePath = $targetDir . basename($_FILES['images']['name'][$key]);
+                $additionalImagePath = $uploadDir . basename($_FILES['images']['name'][$key]);
 
                 // Prepare SQL statement for inserting image into property_images
                 $stmt_image = $conn->prepare("INSERT INTO property_images (property_id, image_url) VALUES (?, ?)");
@@ -99,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Property uploaded successfully!";
         echo '<script>
             setTimeout(function() {
-            window.location.href = "upload.php";
+            window.location.href = "index.php";
             }, 3000); // Redirect after 3 seconds
             </script>';
     } else {

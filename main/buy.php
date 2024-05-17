@@ -160,7 +160,7 @@
                         echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
                         echo "</div>";
                         echo "<div class='card-price'><span>RF </span>" . $row["price"] . "</div>";
-                        echo "<img src='"  . $row["image"] .  "' alt='' />";
+                        echo "<img src='../"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";
                     }

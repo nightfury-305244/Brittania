@@ -107,7 +107,7 @@ form.addEventListener("submit", (event)=>{
 
     var http = new XMLHttpRequest()
 
-    http.open('POST', 'process_upload.php', true)
+    http.open('POST', form.action, true)
     http.send(formData)
     format();
 })
