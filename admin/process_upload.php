@@ -102,20 +102,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        echo "Property uploaded successfully!";
-        echo '<script>
-            setTimeout(function() {
-            window.location.href = "index.php";
-            }, 3000); // Redirect after 3 seconds
-            </script>';
+        http_response_code(200); // OK
+        echo json_encode(["message" => "Property uploaded successfully!"]);
     } else {
-        echo "Error uploading property: " . $stmt->error;
+        http_response_code(400); // Bad Request
+        echo json_encode(["message" => "Error uploading property: " . $stmt->error]);
     }
 
     // Close statements and connection
     $stmt->close();
     $conn->close();
 } else {
-    echo "Invalid request method.";
+    http_response_code(405); // Method Not Allowed
+    echo json_encode(["message" => "Invalid request method."]);
 }
 ?>

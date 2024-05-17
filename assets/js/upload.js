@@ -108,6 +108,22 @@ form.addEventListener("submit", (event)=>{
     var http = new XMLHttpRequest()
 
     http.open('POST', form.action, true)
+
+    http.onload = function() {
+        if (http.status >= 200 && http.status < 300) {
+            // Request was successful
+            alert('Update successful');
+        } else {
+            // Request failed
+            alert('Update failed');
+        }
+    };
+
+    http.onerror = function() {
+        // Network error
+        alert('Update failed: Network error');
+    };
+
     http.send(formData)
     format();
 })

@@ -198,8 +198,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div id="cid_29" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="available"
                 name="available" style="width:197px" data-component="dropdown" aria-label="Available">
                 <option value="">Please Select</option>
-                <option selected="" value="Available">Available</option>
-                <option value="Not Available">Not Available</option>
+                <option selected="" value="A">Available</option>
+                <option value="N">Not Available</option>
               </select> </div>
           </li>
           <li class="form-line" data-type="control_divider" id="id_30">
