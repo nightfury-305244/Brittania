@@ -3,22 +3,24 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    // Redirect to login page if not logged in
-    header('Location: ucAdminP.php');
-    exit;
+  // Redirect to login page if not logged in
+  header('Location: ucAdminP.php');
+  exit;
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/0fa496f194.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../assets/css/stylesAP.css">
-    <link type="text/css" rel="stylesheet" href="../assets/css/jotfor/5e6b428acc8c4e222d1beb91.css" />
-    <title>Commercial Upload</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/0fa496f194.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../assets/css/stylesAP.css">
+  <link type="text/css" rel="stylesheet" href="../assets/css/jotfor/5e6b428acc8c4e222d1beb91.css" />
+  <title>Brittania Admin</title>
 </head>
+
 <body>
 
   <div id="nav-bar">
@@ -26,8 +28,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       <hr />
     </div>
     <div id="nav-content">
-      <div class="nav-button"><a href="uploadRent_Buy.php"><i class="fas fa-download"></i><span>Rent/Buy</span></a></div>
-      <div class="nav-button active"><a href="uploadCommercial.php"><i class="fas fa-download"></i><span>Commercial</span></a></div>
+      <div class="nav-button active"><a href="uploadRent_Buy.php"><i class="fas fa-download"></i><span>Rent/Buy</span></a></div>
+      <div class="nav-button"><a href="uploadCommercial.php"><i class="fas fa-download"></i><span>Commercial</span></a></div>
       <hr />
       <div id="nav-content-highlight"></div>
     </div>
@@ -41,7 +43,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           <li id="cid_1" class="form-input-wide" data-type="control_head">
             <div class="form-header-group  header-large">
               <div class="header-text httal htvam">
-                <h1 id="header_1" class="form-header" data-component="header">Commercial - Upload Property</h1>
+                <h1 id="header_1" class="form-header" data-component="header">Rental/Buy - Upload Property</h1>
               </div>
             </div>
           </li>
@@ -77,7 +79,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             data-compound-hint=",,,,Please Select,,Please Select,"><label
               class="form-label form-label-top form-label-auto" id="label_8" for="address_l1"
               aria-hidden="false">
-              Address</label>
+              Address </label>
             <div id="cid_8" class="form-input-wide" data-layout="full">
               <div summary="" class="form-address-table jsTest-addressField">
                 <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
@@ -100,7 +102,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         id="address_l2" name="address_l2" class="form-textbox form-address-line"
                         data-defaultvalue="" autoComplete="section-input_8 address-line2"
                         data-component="address_line_2" aria-labelledby="label_8 sublabel_8_addr_line2"
-                        value="" />
+                        value="" required=""/>
                       <label class="form-sub-label" for="address_l2" id="sublabel_8_addr_line2"
                         style="min-height:13px">Address Line 2</label>
                       </span>
@@ -189,7 +191,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div id="cid_28" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="b_r_c"
                 name="b_r_c" style="width:197px" data-component="dropdown" aria-label="Buy/Rent">
                 <option value="">Please Select</option>
-                <option selected="" value="Commercial">Commercial</option>
+                <option selected="" value="Rent">Rent</option>
+                <option value="Buy">Buy</option>
               </select> </div>
           </li>
           <li class="form-line fixed-width form-line-column form-col-5" data-type="control_dropdown" id="id_29"><label
@@ -252,10 +255,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </form>
   </div>
 
-
-</form>
-
-<script src="../assets/js/upload.js"></script>
-
+  <script src="../assets/js/upload.js"></script>
 </body>
+
 </html>

@@ -129,7 +129,7 @@
                     <div class="container">
                         <div class="img-card">
                             <!-- Large Image -->
-                            <img src="<?php echo $row['image']; ?>" alt="Featured Image" id="featured-image">
+                            <img src="../<?php echo $row['image']; ?>" alt="Featured Image" id="featured-image">
                            <!-- Small image container -->
                         <div class="small-Card">
                             <section class="product-container">
@@ -137,7 +137,7 @@
                                 <!-- Small images -->
                                 <?php if (!empty($images)): ?>
                                     <?php foreach ($images as $image): ?>
-                                        <img src="<?php echo $image['image_url']; ?>" alt="" class="small-Img">
+                                        <img src="../<?php echo $image['image_url']; ?>" alt="" class="small-Img">
                                     <?php endforeach; ?>
                                 <?php endif; ?>
                                 </div>
