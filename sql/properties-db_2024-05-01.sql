@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `property` (
   `id` int NOT NULL,
   `title` varchar(30) NOT NULL,
-  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `price` varchar(15) NOT NULL,
   `address_l1` varchar(30) NOT NULL,
   `address_l2` varchar(30) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE `property` (
   `available` varchar(30) NOT NULL,
   `keywords` varchar(100) NOT NULL,
   `image` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `property`
@@ -114,7 +114,7 @@ CREATE TABLE `property_images` (
   `id` int NOT NULL,
   `property_id` int DEFAULT NULL,
   `image_url` varchar(255) NOT NULL DEFAULT 'default_image.jpg'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `property_images`

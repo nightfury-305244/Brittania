@@ -50,7 +50,7 @@ if ($stmt->num_rows > 0) {
         $_SESSION['id'] = $id;
         
         // Redirect to upload.php upon successful login
-        header('Location: upload.php');
+        header('Location: index.php');
         exit;
     } else {
         // Incorrect password
