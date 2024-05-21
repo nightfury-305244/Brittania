@@ -50,7 +50,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_15" class="form-input-wide" data-layout="half"> <input type="text" id="title"
                 name="title" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:648px"
-                size="648" data-component="textbox" aria-labelledby="label_15" value="" required=""/> </div>
+                size="648" data-component="textbox" aria-labelledby="label_15" value="" required="" required/> </div>
           </li>
           <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_19"><label
               class="form-label form-label-top form-label-auto" id="label_19" for="price" aria-hidden="false"> Price
@@ -129,7 +129,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
                   <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
                     <span class="form-sub-label-container" style="vertical-align:top">
-                      <input type="number" id="postcode"
+                      <input type="text" id="postcode"
                         name="postcode" class="form-textbox form-address-postal" data-defaultvalue=""
                         autoComplete="section-input_8 postal-code" data-component="zip"
                         aria-labelledby="label_8 sublabel_8_postal" required="" value="" />
@@ -189,7 +189,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div id="cid_28" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="b_r_c"
                 name="b_r_c" style="width:197px" data-component="dropdown" aria-label="Buy/Rent">
                 <option value="">Please Select</option>
-                <option selected="" value="Commercial">Commercial</option>
+                <option value="Commercial">Commercial</option>
               </select> </div>
           </li>
           <li class="form-line fixed-width form-line-column form-col-5" data-type="control_dropdown" id="id_29"><label
@@ -215,7 +215,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               (comma-separated) Garden, Pool, Garage, etc: </label>
             <div id="cid_32" class="form-input-wide" data-layout="half"> <input type="text" id="keywords"
                 name="keywords" data-type="input-textbox" class="form-textbox" data-defaultvalue=""
-                style="width:648px" size="648" data-component="textbox" aria-labelledby="label_32" value="" /> </div>
+                style="width:648px; text-transform: capitalize;" size="648" data-component="textbox" aria-labelledby="label_32" value="" /> </div>
           </li>
           <li class="form-line" data-type="control_fileupload" id="id_5"><label
               class="form-label form-label-top form-label-auto" id="label_5" for="images" aria-hidden="false"> Upload Featured Image: </label>

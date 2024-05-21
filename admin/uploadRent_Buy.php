@@ -52,14 +52,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_15" class="form-input-wide" data-layout="half"> <input type="text" id="title"
                 name="title" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:648px"
-                size="648" data-component="textbox" aria-labelledby="label_15" value="" /> </div>
+                size="648" data-component="textbox" aria-labelledby="label_15" value="" required/> </div>
           </li>
           <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_19"><label
               class="form-label form-label-top form-label-auto" id="label_19" for="price" aria-hidden="false"> Price
             </label>
             <div id="cid_19" class="form-input-wide" data-layout="half"> <input type="number" id="price"
                 name="price" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px"
-                size="310" data-component="textbox" aria-labelledby="label_19" value="" /> </div>
+                size="310" data-component="textbox" aria-labelledby="label_19" value="" required/> </div>
           </li>
           <li class="form-line" data-type="control_textarea" id="id_6"><label
               class="form-label form-label-top form-label-auto" id="label_6" for="description" aria-hidden="false">
@@ -89,7 +89,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                         id="address_l1" name="address_l1" class="form-textbox form-address-line"
                         data-defaultvalue="" autoComplete="section-input_8 address-line1"
                         data-component="address_line_1" aria-labelledby="label_8 sublabel_8_addr_line1"
-                        value="" />
+                        value="" required/>
                         <label class="form-sub-label" for="address_l1" id="sublabel_8_addr_line1"
                         style="min-height:13px">Address Line 1</label>
                       </span>
@@ -114,7 +114,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                       <input type="text" id="city"
                         name="city" class="form-textbox form-address-city" data-defaultvalue=""
                         autoComplete="section-input_8 address-level2" data-component="city"
-                        aria-labelledby="label_8 sublabel_8_city"  value="" />
+                        aria-labelledby="label_8 sublabel_8_city"  value="" required/>
                         <label class="form-sub-label" for="city" id="sublabel_8_city" style="min-height:13px">City</label>
                     </span>
                   </span>
@@ -123,7 +123,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                       <input type="text" id="town"
                         name="town" class="form-textbox form-address-state" data-defaultvalue=""
                         autoComplete="section-input_8 address-level1" data-component="state"
-                        aria-labelledby="label_8 sublabel_8_state"  value="" /><label class="form-sub-label"
+                        aria-labelledby="label_8 sublabel_8_state"  value="" required/><label class="form-sub-label"
                         for="town" id="sublabel_8_state" style="min-height:13px">Town</label>
                     </span>
                   </span>
@@ -131,10 +131,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
                   <span class="form-address-line form-address-zip-line jsTest-address-lineField ">
                     <span class="form-sub-label-container" style="vertical-align:top">
-                      <input type="number" id="postcode"
+                      <input type="text" id="postcode"
                         name="postcode" class="form-textbox form-address-postal" data-defaultvalue=""
                         autoComplete="section-input_8 postal-code" data-component="zip"
-                        aria-labelledby="label_8 sublabel_8_postal"  value="" />
+                        aria-labelledby="label_8 sublabel_8_postal"  value="" required/>
                       <label class="form-sub-label"
                         for="postcode" id="sublabel_8_postal" style="min-height:13px">Postal / Zip
                         Code</label>
@@ -180,7 +180,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div id="cid_25" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="type"
                 name="type" style="width:197px" data-component="dropdown" aria-label="Type:">
                 <option value="">Please Select</option>
-                <option selected="" value="House">House</option>
+                <option value="House">House</option>
                 <option value="Apartment">Apartment</option>
               </select> </div>
           </li>
@@ -191,7 +191,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div id="cid_28" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="b_r_c"
                 name="b_r_c" style="width:197px" data-component="dropdown" aria-label="Buy/Rent">
                 <option value="">Please Select</option>
-                <option selected="" value="Rent">Rent</option>
+                <option value="Rent">Rent</option>
                 <option value="Buy">Buy</option>
               </select> </div>
           </li>
@@ -201,7 +201,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             <div id="cid_29" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="available"
                 name="available" style="width:197px" data-component="dropdown" aria-label="Available">
                 <option value="">Please Select</option>
-                <option selected="" value="A">Available</option>
+                <option value="A">Available</option>
                 <option value="N">Not Available</option>
               </select> </div>
           </li>
@@ -218,7 +218,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               (comma-separated) Garden, Pool, Garage, etc: </label>
             <div id="cid_32" class="form-input-wide" data-layout="half"> <input type="text" id="keywords"
                 name="keywords" data-type="input-textbox" class="form-textbox" data-defaultvalue=""
-                style="width:648px" size="648" data-component="textbox" aria-labelledby="label_32" value="" /> </div>
+                style="width:648px; text-transform: capitalize;" size="648" data-component="textbox" aria-labelledby="label_32" autocapitalize="characters" value="" /> </div>
           </li>
           <li class="form-line" data-type="control_fileupload" id="id_5"><label
               class="form-label form-label-top form-label-auto" id="label_5" for="images" aria-hidden="false"> Upload Featured Image: </label>

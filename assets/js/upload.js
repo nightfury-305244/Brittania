@@ -80,9 +80,9 @@ function uploadFile(file){
             <svg xmlns="http://www.w3.org/2000/svg" class="cross" height="20" width="20"><path d="m5.979 14.917-.854-.896 4-4.021-4-4.062.854-.896 4.042 4.062 4-4.062.854.896-4 4.062 4 4.021-.854.896-4-4.063Z"/></svg>
         </div>
     `
-    listContainer.prepend(li)
+    listContainer.prepend(li);
     
-    allFiles.push(file)
+    allFiles.push(file);
 
     li.querySelector('.cross').onclick = () => {
         li.remove()  // Corrected line
@@ -97,17 +97,17 @@ function iconSelector(type){
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
 
-    const formData = new FormData(form)
+    const formData = new FormData(form);
 
-    formData.delete('images[]')
+    formData.delete('images[]');
 
     allFiles.forEach((file) => {
         formData.append('images[]', file);
     })
 
-    var http = new XMLHttpRequest()
+    var http = new XMLHttpRequest();
 
-    http.open('POST', form.action, true)
+    http.open('POST', form.action, true);
 
     http.onload = function() {
         if (http.status >= 200 && http.status < 300) {
@@ -124,11 +124,26 @@ form.addEventListener("submit", (event)=>{
         alert('Update failed: Network error');
     };
 
-    http.send(formData)
+    http.send(formData);
     format();
 })
 
 const format = () => {
+    document.getElementById("title").value = "";
+    document.getElementById("price").value = 0;
+    document.getElementById("description").value = "";
+    document.getElementById("address_l1").value = "";
+    document.getElementById("address_l2").value = "";
+    document.getElementById("city").value = "";
+    document.getElementById("town").value = "";
+    document.getElementById("postcode").value = "";
+    document.getElementById("details").value = "";
+    document.getElementById("bedroom").value = 0;
+    document.getElementById("bathroom").value = 0;
+    document.getElementById("type").value = "";
+    document.getElementById("b_r_c").value = "";
+    document.getElementById("available").value = "";
+    document.getElementById("keywords").value = "";
     allFiles = []
     while (listContainer.firstChild) {
         listContainer.removeChild(listContainer.firstChild);
