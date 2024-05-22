@@ -40,7 +40,7 @@
 
   /*========== z index ==========*/
   --z-tooltip: 10;
-  --z-fixed: 100;
+  --z-fixed: 50002;
 }
 
 /* Responsive typography */
@@ -240,7 +240,7 @@ body.dark-theme{
 }
 
 .property__text, .property__text *{
-  color: var(--text-color);
+  color: var(--text-color)!important;
 }
 
 .nav__menu{
