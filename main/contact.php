@@ -365,41 +365,8 @@
         <!--=============== SCROLLREVEAL ===============-->
         <script src="../assets/js/scrollreveal.min.js"></script>
 
-        <!--=============== SWIPER JS ===============-->
-        <script src="../assets/js/swiper-bundle.min.js"></script>
-
-        <script>
-            var swiper = new Swiper('.swiper-image-container', {
-                slidesPerView: 1, // Number of slides per view
-                spaceBetween: 10, // Space between each slide (adjust as needed)
-                loop: true, // Enable loop mode
-                pagination: {
-                    el: '.swiper-pagination', // Add pagination
-                    clickable: true, // Allow pagination bullets to be clickable
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next', // Add navigation button for next slide
-                    prevEl: '.swiper-button-prev', // Add navigation button for previous slide
-                },
-            });
-        </script>
-
         <!--=============== MAIN JS ===============-->
         <script src="../assets/js/main.js"></script>
 
-
-        <!-- Hamburger Menu JavaScript -->
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                // Select the hamburger icon and menu container
-                const hamburger = document.querySelector('.hamburger');
-                const hamMenu = document.querySelector('.ham__menu');
-
-                // Toggle menu visibility when hamburger icon is clicked
-                hamburger.addEventListener('click', function() {
-                    hamMenu.classList.toggle('open');
-                });
-            });
-        </script>
     </body>
 </html>
