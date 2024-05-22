@@ -13,77 +13,70 @@
     <!-- SWIPER CSS -->
     <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/stylesUC.css">
     <link rel="stylesheet" href="../assets/css/prodstlyes.css">
+    <link rel="stylesheet" href="../assets/css/stylesUC.css">
 
     <title>Brittania Estates</title>
 </head>
 <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
-            <nav class="nav">
-                <a href="index.php" class="nav__logo">
-                    Brittania Estates <i class="bx bxs-home-alt-2"></i>
-                </a>
-
-                <div class="nav__menu">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.php" class="nav__link">
-                                <i class='bx bx-home-alt-2' ></i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="rent.php" class="nav__link">
-                                <i class='bx bx-building-house' ></i>
-                                <span>Rent</span>
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="buy.php" class="nav__link">
-                                <i class='bx bxs-bank'></i>
-                                <span>Buy</span>
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="commercial.php" class="nav__link">
-                                <i class='bx bxs-briefcase'></i>
-                                <span>Commercial</span>
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="management.php" class="nav__link">
-                                <i class='bx bx-sitemap'></i>
-                                <span>Management</span>
-                            </a>
-                        </li>
-
-                        <li class="nav__item">
-                            <a href="contact.php" class="nav__link">
-                                <i class='bx bx-phone' ></i>
-                                <span>Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Theme change button -->
-                <div class="hamburger-menu" id='hamburger-menu'>
-                <i class='bx bx-moon change-theme' id="theme-button"></i>
-                <a href="javascript:void(0);" class="hamburger" id="hamburgerIcon">
+        <nav class="nav">
+            <a href="index.php" class="nav__logo property__text">
+                Brittania Estates <i class="bx bxs-home-alt-2"></i>
+            </a>
+    
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.php" class="nav__link property__text">
+                            <i class='bx bx-home-alt-2'></i>
+                            <span>Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="rent.php" class="nav__link property__text">
+                            <i class='bx bx-building-house'></i>
+                            <span>Rent</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="buy.php" class="nav__link property__text">
+                            <i class='bx bxs-bank'></i>
+                            <span>Buy</span>
+                        </a>
+                    </li>
+                    <li class="nav__item"> 
+                        <a href="commercial.php" class="nav__link property__text">
+                            <i class='bx bxs-briefcase'></i>
+                            <span>Commercial</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="management.php" class="nav__link property__text">
+                            <i class='bx bx-sitemap'></i>
+                            <span>Management</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contact.php" class="nav__link property__text">
+                            <i class='bx bx-phone'></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Theme change button -->
+            <div class="hamburger-menu" id='hamburger-menu'>
+                <i class='bx bx-moon change-theme property__text' id="theme-button"></i>
+                <a href="javascript:void(0);" class="hamburger property__text" id="hamburgerIcon">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
-                
-            </nav>
-            
-        </header>
-
+        </nav>
+    </header>
+    
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
@@ -127,21 +120,25 @@
                 <section class="property-details section" id="property-details">
                     <!-- Property details content -->
                     <div class="container">
-                        <div class="img-card">
-                            <!-- Large Image -->
-                            <img src="../<?php echo $row['image']; ?>" alt="Featured Image" id="featured-image">
-                           <!-- Small image container -->
-                        <div class="small-Card">
-                            <section class="product-container">
-                                <div class="small-Card-container">
-                                <!-- Small images -->
+                        <div class="carousel_container">
+
+                            <div class="carousel_items">   
                                 <?php if (!empty($images)): ?>
-                                    <?php foreach ($images as $image): ?>
-                                        <img src="../<?php echo $image['image_url']; ?>" alt="" class="small-Img">
+                                    <?php foreach ($images as $index => $image): ?>
+                                        <div class="carousel_item" id="item_<?php echo $index; ?>">
+                                            <img src="../<?php echo $image['image_url']; ?>" alt="" class="small-Img" />
+                                        </div>
                                     <?php endforeach; ?>
-                                <?php endif; ?>
-                                </div>
-                            </section>
+                                <?php endif; ?>     
+                            </div>
+                            
+                            <div class="item_arrows"> 
+                                <div class="item_arrow item_prev"><i class="fa fa-angle-left"></i></div>  
+                                <div class="item_arrow item_next"><i class="fa fa-angle-right"></i></div>        
+                            </div>
+                            
+                            <div class="nav_dots"></div>
+                            
                         </div>
 
                         <!-- Product info -->
@@ -229,74 +226,72 @@
     </script>
     <!-- Footer -->
 
-    <!-- Nav Menu Start -->
-    <div class="chakra-modal__content-container" id="hamContent">
-            <div
-                role="dialog"
-                id="hamMenu"
-                tabindex="-1"
-                aria-modal="true"
-                class="chakra-modal__content"
-                aria-describedby="chakra-modal--body-:r5:"
+     <!-- Nav Menu Start -->
+     <div class="chakra-modal__content-container" id="hamContent">
+        <div
+            role="dialog"
+            id="hamMenu"
+            tabindex="-1"
+            aria-modal="true"
+            class="chakra-modal__content"
+            aria-describedby="chakra-modal--body-:r5:"
+        >
+            <button
+            type="button"
+            aria-label="Close"
+            class="chakra-modal__close-btn"
+            id="hamClose"
             >
-                <button
-                type="button"
-                aria-label="Close"
-                class="chakra-modal__close-btn"
-                id="hamClose"
+                <svg
+                    viewBox="0 0 24 24"
+                    focusable="false"
+                    class="chakra-icon css-onkibi"
+                    aria-hidden="true"
                 >
-                    <svg
-                        viewBox="0 0 24 24"
-                        focusable="false"
-                        class="chakra-icon css-onkibi"
-                        aria-hidden="true"
-                    >
-                        <path
-                        fill="currentColor"
-                        d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"
-                        ></path>
-                    </svg>
-                </button>
-                <div class="chakra-modal__body" id="chakra-modal--body-:r5:">
-                    <div class="css-wkpw2c">
-                        <div class="css-1gj4t3y">
-                            <a href="index.php" class="nav__logo">
-                                Brittania Estates <i class="bx bxs-home-alt-2"></i>
-                            </a>
-                        </div>
-                        <div class="css-1f2qzn3">
-                                <a
-                                    class="BurgerMenu_BurgerMenu"
-                                    href="index.php"
-                                    >Home</a
-                                >
-                                <a
-                                    class="BurgerMenu_BurgerMenu"
-                                    href="rent.php"
-                                    >Rent</a
-                                >
-                                <a
-                                    target="_blank"
-                                    href="buy.php"
-                                    rel="noopener noreferrer"
-                                    class="BurgerMenu_BurgerMenu"
-                                    >Buy</a
-                                >
-                                <a
-                                    class="BurgerMenu_BurgerMenu"
-                                    href="commercial.php"
-                                    >Commercial</a
-                                >
-                                <a
-                                    class="BurgerMenu_BurgerMenu"
-                                    href="management.php"
-                                    >Management</a
-                                >
-                                <a
-                                    class="BurgerMenu_BurgerMenu"
-                                    href="contact.php"
-                                    >Contact</a
-                                >
+                    <path
+                    fill="currentColor"
+                    d="M.439,21.44a1.5,1.5,0,0,0,2.122,2.121L11.823,14.3a.25.25,0,0,1,.354,0l9.262,9.263a1.5,1.5,0,1,0,2.122-2.121L14.3,12.177a.25.25,0,0,1,0-.354l9.263-9.262A1.5,1.5,0,0,0,21.439.44L12.177,9.7a.25.25,0,0,1-.354,0L2.561.44A1.5,1.5,0,0,0,.439,2.561L9.7,11.823a.25.25,0,0,1,0,.354Z"
+                    ></path>
+                </svg>
+            </button>
+            <div class="chakra-modal__body" id="chakra-modal--body-:r5:">
+                <div class="css-wkpw2c">
+                    <div class="css-1gj4t3y">
+                        <a href="index.php" class="nav__logo">
+                            Brittania Estates <i class="bx bxs-home-alt-2"></i>
+                        </a>
+                    </div>
+                    <div class="css-1f2qzn3">
+                            <a
+                                class="BurgerMenu_BurgerMenu"
+                                href="index.php"
+                                >Home</a
+                            >
+                            <a
+                                class="BurgerMenu_BurgerMenu"
+                                href="rent.php"
+                                >Rent</a
+                            >
+                            <a
+                                href="buy.php"
+                                class="BurgerMenu_BurgerMenu"
+                                >Buy</a
+                            >
+                            <a
+                                class="BurgerMenu_BurgerMenu"
+                                href="commercial.php"
+                                >Commercial</a
+                            >
+                            <a
+                                class="BurgerMenu_BurgerMenu"
+                                href="management.php"
+                                >Management</a
+                            >
+                            <a
+                                class="BurgerMenu_BurgerMenu"
+                                href="contact.php"
+                                >Contact</a
+                            >
                         </div>
                     </div>
                 </div>
@@ -311,10 +306,16 @@
 
     <!--=============== SCROLLREVEAL ===============-->
     <script src="../assets/js/scrollreveal.min.js"></script>
-    <!--=============== SWIPER JS ===============-->
-    <script src="../assets/js/swiper-bundle.min.js"></script>
+
+    <!--================= CAROUSEL =================-->
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/ThrowPropsPlugin.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/231648/Draggable.min.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+    <script src="../assets/js/details.js"></script>
+
     <!--=============== MAIN JS ===============-->
     <script src="../assets/js/main.js"></script>
-    <script src="../assets/js/details.js"></script>
 </body>
 </html>

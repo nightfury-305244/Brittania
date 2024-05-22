@@ -239,6 +239,10 @@ body.dark-theme{
   color: var(--first-color);
 }
 
+.property__text, .property__text *{
+  color: var(--text-color);
+}
+
 .nav__menu{
   display: none;
 }
@@ -284,7 +288,7 @@ body.dark-theme{
   position: fixed;
   left: 0px;
   top: 0px;
-  z-index: 101;
+  z-index: 50002;
   -webkit-box-pack: center;
   justify-content: center;
 }
