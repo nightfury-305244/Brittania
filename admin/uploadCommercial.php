@@ -14,6 +14,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/0fa496f194.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../assets/css/stylesAP.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/jotfor/5e6b428acc8c4e222d1beb91.css" />
@@ -29,6 +30,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       <div class="nav-button"><a href="uploadRent_Buy.php"><i class="fas fa-download"></i><span>Rent/Buy</span></a></div>
       <div class="nav-button active"><a href="uploadCommercial.php"><i class="fas fa-download"></i><span>Commercial</span></a></div>
       <hr />
+      <div class="nav-button"><a href="logout.php"><i class="fa-solid fa-right-from-bracket"></i><span>Log out</span></a></div>
       <div id="nav-content-highlight"></div>
     </div>
   </div>

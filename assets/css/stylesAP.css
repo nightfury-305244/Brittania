@@ -184,7 +184,7 @@
 }
   
   #nav-bar {
-    position: absolute;
+    position: fixed;
     left: 16px;
     top: 16px;
     height: calc(100% - 32px);
@@ -397,7 +397,7 @@
     font-size: 17px;
   }
   
-  #nav-bar .fas {
+  .nav-button i {
     min-width: 3rem;
     text-align: center;
   }

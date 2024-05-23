@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="../assets/css/stylesAP.css">
@@ -24,6 +25,15 @@
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
 					<input type="password" class="login__input" placeholder="Password" name="password" id="password" required>
+				</div>
+				<div>
+					
+					<?php
+						session_start();
+						if (isset($_SESSION['error'])): ?>
+							<p style="color:red;"><?php echo htmlspecialchars($_SESSION['error']); ?></p>
+							<?php unset($_SESSION['error']); ?>
+					<?php endif; ?>
 				</div>
 				<button class="button login__submit" type="submit">
 					<span class="button__text">Log In Now</span>

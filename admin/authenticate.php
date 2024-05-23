@@ -1,5 +1,6 @@
 <?php
 session_start();
+$errorMessage = '';
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -54,14 +55,20 @@ if ($stmt->num_rows > 0) {
         exit;
     } else {
         // Incorrect password
-        echo 'Incorrect username and/or password!';
+        $errorMessage = 'Incorrect username and/or password!';
     }
 } else {
     // Incorrect username
-    echo 'Incorrect username and/or password!';
+    $errorMessage = 'Incorrect username and/or password!';
 }
 
 // Close the statement and connection
 $stmt->close();
 $conn->close();
+
+if ($errorMessage) {
+    $_SESSION['error'] = $errorMessage;
+    header("Location: ucAdminP.php");
+    exit;
+}
 ?>
