@@ -172,7 +172,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               <div class="form-single-column" role="group" aria-labelledby="label_35" data-component="checkbox"><span
                   class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox"
                     aria-describedby="label_35" class="form-checkbox" id="bathroom_access" name="bathroom_access"
-                    value="" /><label id="label_bathroom_access" for="bathroom_access"></label></span></div>
+                    value="1" /><label id="label_bathroom_access" for="bathroom_access"></label></span></div>
             </div>
           </li>
           <li class="form-line fixed-width form-line-column form-col-5" data-type="control_checkbox" id="id_36"><label
@@ -182,7 +182,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               <div class="form-single-column" role="group" aria-labelledby="label_36" data-component="checkbox"><span
                   class="form-checkbox-item" style="clear:left"><span class="dragger-item"></span><input type="checkbox"
                     aria-describedby="label_36" class="form-checkbox" id="parking" name="parking"
-                    value="" /><label id="label_parking" for="parking"></label></span></div>
+                    value="1" /><label id="label_parking" for="parking"></label></span></div>
             </div>
           </li>
           <li class="form-line fixed-width form-line-column form-col-3" data-type="control_dropdown" id="id_25"><label

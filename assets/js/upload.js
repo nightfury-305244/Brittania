@@ -159,6 +159,12 @@ const format = () => {
     if (document.getElementById("square_feet_size")){
         document.getElementById("square_feet_size").value=0;
     }
+    if (document.getElementById("bathroom_access")){
+        document.getElementById("bathroom_access").checked = false;
+    }
+    if (document.getElementById("parking")){
+        document.getElementById("parking").checked = false;
+    }
     allFiles = []
     while (listContainer.firstChild) {
         listContainer.removeChild(listContainer.firstChild);

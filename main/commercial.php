@@ -104,7 +104,7 @@
                 require 'db_connection.php';
 
                 // Pagination
-                $results_per_page = 20; // Number of records to display per page
+                $results_per_page = 12; // Number of records to display per page
                 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1; // Get the current page number
                 $start = ($page - 1) * $results_per_page; // Calculate the starting index for the records
 
@@ -138,12 +138,21 @@
                         echo "POSTCODE: ". $row["postcode"] ." <BR>";
                         echo "</div>";
                         echo "<div class='popular__description2'>";
+                        echo "<div class='popular__description2_item'><span>". $row["square_feet_size"] . "</span><i class='fa-solid fa-socks'></i></div>";
+
+                        if ($row["bathroom_access"]) {
+                            echo "<div class='popular__description2_item'><span></span><i class='fa-solid fa-bath'></i></div>";
+                        }
+                        if ($row["parking"]) {
+                            echo "<div class='popular__description2_item'><span></span><i class='fa-solid fa-square-parking'></i></div>";
+                        }
+
                         echo "</div>";
                         echo "</div>";
                         echo "</div>";
                         echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
                         echo "</div>";
-                        echo "<div class='card-price'><span>RF </span>" . $row["price"] . "<span> PCM </span> </div>";
+                        echo "<div class='card-price'><span>RF </span>" . $row["price"] . "<span> PCM</span></div>";
                         echo "<img src='../"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";
