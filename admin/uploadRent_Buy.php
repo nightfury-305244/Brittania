@@ -51,14 +51,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           </li>
           <li class="form-line fixed-width" data-type="control_textbox" id="id_15"><label
               class="form-label form-label-top form-label-auto" id="label_15" for="title" aria-hidden="false"> Title
-            </label>
+              <span class="form-required">*</span></label>
             <div id="cid_15" class="form-input-wide" data-layout="half"> <input type="text" id="title"
                 name="title" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:648px"
                 size="648" data-component="textbox" aria-labelledby="label_15" value="" required/> </div>
           </li>
           <li class="form-line form-line-column form-col-1" data-type="control_textbox" id="id_19"><label
               class="form-label form-label-top form-label-auto" id="label_19" for="price" aria-hidden="false"> Price
-            </label>
+              <span class="form-required">*</span></label>
             <div id="cid_19" class="form-input-wide" data-layout="half"> <input type="number" id="price"
                 name="price" data-type="input-textbox" class="form-textbox" data-defaultvalue="" style="width:310px"
                 size="310" data-component="textbox" aria-labelledby="label_19" value="" required/> </div>
@@ -81,7 +81,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             data-compound-hint=",,,,Please Select,,Please Select,"><label
               class="form-label form-label-top form-label-auto" id="label_8" for="address_l1"
               aria-hidden="false">
-              Address </label>
+              Address <span class="form-required">*</span></label>
             <div id="cid_8" class="form-input-wide" data-layout="full">
               <div summary="" class="form-address-table jsTest-addressField">
                 <div class="form-address-line-wrapper jsTest-address-line-wrapperField">
@@ -181,8 +181,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_25" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="type"
                 name="type" style="width:197px" data-component="dropdown" aria-label="Type:">
-                <option value="">Please Select</option>
-                <option value="House">House</option>
+                <option value="House" selected>House</option>
                 <option value="Apartment">Apartment</option>
               </select> </div>
           </li>
@@ -192,7 +191,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_28" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="b_r_c"
                 name="b_r_c" style="width:197px" data-component="dropdown" aria-label="Buy/Rent">
-                <option value="">Please Select</option>
+                <option value="">Please select</option>
                 <option value="Rent">Rent</option>
                 <option value="Buy">Buy</option>
               </select> </div>
@@ -202,8 +201,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
               Available </label>
             <div id="cid_29" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="available"
                 name="available" style="width:197px" data-component="dropdown" aria-label="Available">
-                <option value="">Please Select</option>
-                <option value="A">Available</option>
+                <option value="A" selected>Available</option>
                 <option value="N">Not Available</option>
               </select> </div>
           </li>
@@ -217,7 +215,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           <li class="form-line fixed-width" data-type="control_textbox" id="id_32"><label
               class="form-label form-label-top form-label-auto" id="label_32" for="keywords" aria-hidden="false">
               Keywords
-              (comma-separated) Garden, Pool, Garage, etc: </label>
+              (comma-separated) Garden, Pool, Garage, etc: <span class="form-required">*</span></label>
             <div id="cid_32" class="form-input-wide" data-layout="half"> <input type="text" id="keywords"
                 name="keywords" data-type="input-textbox" class="form-textbox" data-defaultvalue=""
                 style="width:648px; text-transform: capitalize;" size="648" data-component="textbox" aria-labelledby="label_32" autocapitalize="characters" value="" /> </div>

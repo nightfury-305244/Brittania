@@ -13,11 +13,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require 'db_connection.php';
 
     // Prepare SQL statement for property insertion
-    $stmt = $conn->prepare("INSERT INTO property (title, description, price, address_l1, address_l2, city, town, postcode, details, bedroom, bathroom, type, b_r_c, available, keywords, image) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO property (title, description, price, address_l1, address_l2, city, town, postcode, details, bedroom, bathroom, type, b_r_c, available, keywords, image, square_feet_size, bathroom_access, parking ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
     // Check if the statement was prepared successfully
     if (!$stmt) {
-        die("Prepare failed: (" . $conn->errno . ") " . $conn->error);
+        http_response_code(500); // Internal Server Error
+        echo json_encode(["message" => "Prepare failed: (" . $conn->errno . ") " . $conn->error]);
+        exit;
     }
 
     // Get form input values
@@ -30,15 +32,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $town = $_POST['town'];
     $postcode = $_POST['postcode'];
     $details = $_POST['details'];
-    $bedroom = $_POST['bedroom'] || 0;
-    $bathroom = $_POST['bathroom'] || 0;
+    $bedroom = isset($_POST['bedroom']) ? $_POST['bedroom'] : 0;
+    $bathroom = isset($_POST['bathroom']) ? $_POST['bathroom'] : 0;
     $type = $_POST['type'];
     $b_r_c = $_POST['b_r_c'];
     $available = $_POST['available'];
     $keywords = $_POST['keywords'];
-    $square_feet_size = $_POST['square_feet_size'] || 0;
-    $bathroom_access = $_POST['bathroom_access'] || 0;
-    $parking = $_POST['parking'] || 0;
+    $square_feet_size = isset($_POST['square_feet_size']) ? $_POST['square_feet_size'] : 0;
+    $bathroom_access = isset($_POST['bathroom_access']) ? $_POST['bathroom_access'] : 0;
+    $parking = isset($_POST['parking']) ? $_POST['parking'] : 0;
 
     $uploadDir = 'assets/img/';
 
@@ -62,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Bind parameters for property insertion
-    $stmt->bind_param("ssissssssiisssss", 
+    $stmt->bind_param("ssissssssiisssssiii", 
         $title, 
         $description, 
         $price, 

@@ -190,7 +190,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_25" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="type"
                 name="type" style="width:197px" data-component="dropdown" aria-label="Type:">
-                <option value="House">House</option>
+                <option value="House" selected>House</option>
                 <option value="Apartment">Apartment</option>
               </select> </div>
           </li>
@@ -200,7 +200,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_28" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="b_r_c"
                 name="b_r_c" style="width:197px" data-component="dropdown" aria-label="Commercial">
-                <option value="Commercial">Commercial</option>
+                <option value="">Please select</option>
+                <option value="Commercial" selected>Commercial</option>
               </select> </div>
           </li>
           <li class="form-line fixed-width form-line-column form-col-5" data-type="control_dropdown" id="id_29"><label
@@ -262,9 +263,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
       </div>
     </form>
   </div>
-
-  <script src="../assets/js/upload.js"></script>
-  <script src="../assets/js/upload.js"></script>
 
   <script src="../assets/js/upload.js"></script>
 

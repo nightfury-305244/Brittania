@@ -112,10 +112,18 @@ form.addEventListener("submit", (event)=>{
     http.onload = function() {
         if (http.status >= 200 && http.status < 300) {
             // Request was successful
+            console.log('Update successful', http.status );
             alert('Update successful');
         } else {
             // Request failed
-            alert('Update failed');
+            var response;
+            try {
+                response = JSON.parse(http.responseText);
+            } catch (e) {
+                response = { message: http.responseText };
+            }
+            console.log('Update failed: ' + response.message);
+            alert('Update failed: ' + response.message);
         }
     };
 
@@ -138,12 +146,19 @@ const format = () => {
     document.getElementById("town").value = "";
     document.getElementById("postcode").value = "";
     document.getElementById("details").value = "";
-    document.getElementById("bedroom").value = 0;
-    document.getElementById("bathroom").value = 0;
-    document.getElementById("type").value = "";
+    if (document.getElementById("bedroom")){
+        document.getElementById("bedroom").value=0;
+    }
+    if (document.getElementById("bathroom")){
+        document.getElementById("bathroom").value=0;
+    }
+    document.getElementById("type").value = "House";
     document.getElementById("b_r_c").value = "";
-    document.getElementById("available").value = "";
+    document.getElementById("available").value = "A";
     document.getElementById("keywords").value = "";
+    if (document.getElementById("square_feet_size")){
+        document.getElementById("square_feet_size").value=0;
+    }
     allFiles = []
     while (listContainer.firstChild) {
         listContainer.removeChild(listContainer.firstChild);
