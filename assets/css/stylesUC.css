@@ -8,6 +8,7 @@
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(228, 8%, 95%);
+  --first-color-light: #fff;
   --second-color: hsl(225, 85%, 16%);
   --title-color: #010101;
   --text-color: #1d3853;
@@ -116,7 +117,8 @@ button {
 /*========== Variables Dark theme ==========*/
 body.dark-theme{
   --first-color: hsl(228, 8%, 95%);
-  --second-color: hsl(243, 92%, 34%);
+  --first-color-light: #1f1f1f;
+  --second-color: hsl(2rgb(17, 17, 17)92%, 34%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(225, 17%, 95%);
   --border-color: hsl(228, 16%, 14%);
@@ -1046,7 +1048,7 @@ body.dark-theme{
   padding: 5px;
   border-radius: .25rem;
   font-size: 18px;
-  color: var(--first-color);
+  color: var(--text-color);
   margin-right: .75rem;
   transition: .2s;
 }
@@ -1242,7 +1244,7 @@ body.dark-theme{
 
 .contact__card i{
   padding: 6px;
-  background-color: var(--first-color-lighten);
+  background-color: var(--first-color-light);
   border-radius: 6px;
   font-size: 1.25rem;
   color: var(--normal-font-size)

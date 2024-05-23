@@ -237,7 +237,7 @@
                                 </div>
 
                                 <a href="sms:07700 334455" class="contact__card-button">
-                                    Call Now
+                                    Text Now
                                     <span class="button__arrow">
                                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 331.64 322.79">
                                             <defs>
