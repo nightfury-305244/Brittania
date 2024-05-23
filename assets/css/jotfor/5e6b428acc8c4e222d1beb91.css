@@ -574,7 +574,8 @@ div.widearea-wrapper {
 .form-multiple-column,
 .form-single-column {
     width: 100%;
-    display: inline-block
+    display: inline-block;
+    margin-top: 9px;
 }
 
 .form-multiple-column .form-checkbox-item,

@@ -30,12 +30,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $town = $_POST['town'];
     $postcode = $_POST['postcode'];
     $details = $_POST['details'];
-    $bedroom = $_POST['bedroom'];
-    $bathroom = $_POST['bathroom'];
+    $bedroom = $_POST['bedroom'] || 0;
+    $bathroom = $_POST['bathroom'] || 0;
     $type = $_POST['type'];
     $b_r_c = $_POST['b_r_c'];
     $available = $_POST['available'];
     $keywords = $_POST['keywords'];
+    $square_feet_size = $_POST['square_feet_size'] || 0;
+    $bathroom_access = $_POST['bathroom_access'] || 0;
+    $parking = $_POST['parking'] || 0;
 
     $uploadDir = 'assets/img/';
 
@@ -75,7 +78,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $b_r_c, 
         $available, 
         $keywords, 
-        $imagePath
+        $imagePath,
+        $square_feet_size,
+        $bathroom_access,
+        $parking
     );
 
     //Execute SQL statement for property insertion

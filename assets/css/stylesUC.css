@@ -860,7 +860,7 @@ body.dark-theme{
   display: flex;
   justify-content: space-between;
   text-align: left;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .popular__description {
