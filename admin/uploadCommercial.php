@@ -190,8 +190,9 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
             </label>
             <div id="cid_25" class="form-input-wide" data-layout="half"> <select class="form-dropdown" id="type"
                 name="type" style="width:197px" data-component="dropdown" aria-label="Type:">
-                <option value="House" selected>House</option>
-                <option value="Apartment">Apartment</option>
+                <option value="">Please select</option>
+                <option value="Warehouse" selected>Warehouse</option>
+                <option value="Store">Store</option>
               </select> </div>
           </li>
           <li class="form-line fixed-width form-line-column form-col-4" data-type="control_dropdown" id="id_28"><label
@@ -223,11 +224,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
           <li class="form-line fixed-width" data-type="control_textbox" id="id_32"><label
               class="form-label form-label-top form-label-auto" id="label_32" for="keywords" aria-hidden="false">
               Keywords
-              (comma-separated) Garden, Pool, Garage, etc: <span class="form-required">*</span> </label>
+              (comma-separated) Garden, Pool, Garage, etc:</label>
             <div id="cid_32" class="form-input-wide" data-layout="half"> <input type="text" id="keywords"
                 name="keywords" data-type="input-textbox" class="form-textbox" data-defaultvalue=""
                 style="width:648px; text-transform: capitalize;" size="648" data-component="textbox"
-                aria-labelledby="label_32" autocapitalize="characters" value="" required/> </div>
+                aria-labelledby="label_32" autocapitalize="characters" value=""/> </div>
           </li>
           <li class="form-line" data-type="control_fileupload" id="id_5"><label
               class="form-label form-label-top form-label-auto" id="label_5" for="images" aria-hidden="false"> Upload Featured Image: </label>

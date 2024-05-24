@@ -152,7 +152,7 @@ const format = () => {
     if (document.getElementById("bathroom")){
         document.getElementById("bathroom").value=0;
     }
-    document.getElementById("type").value = "House";
+    document.getElementById("type").value = "";
     document.getElementById("b_r_c").value = "";
     document.getElementById("available").value = "A";
     document.getElementById("keywords").value = "";

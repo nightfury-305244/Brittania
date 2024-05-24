@@ -471,7 +471,7 @@ body.dark-theme{
 }
 
 .scroll-header .nav__logo{
-  color: var(--first-color);
+  color: var(--text-color);
 }
 
 .scroll-header .change-theme{
@@ -836,7 +836,7 @@ body.dark-theme{
 }
 
 .popular__data{
-  padding: 0 1rem 1 .5rem;
+  padding: 0 20px;
 }
 
 .popular__price{

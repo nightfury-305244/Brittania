@@ -131,15 +131,16 @@
                         echo "<div class='popular__data'>";
                         echo "<div class='popular__container2'>";
                         echo "<div class='popular__description'>";
-                        echo "ADDRESS LINE 1: ". $row["address_l1"] ." <BR>";
-                        echo "ADDRESS LINE 2: ". $row["address_l1"] ." <BR>";
-                        echo "CITY: ". $row["city"] ." <BR>";
-                        echo "TOWN: ". $row["town"] ." <BR>";
-                        echo "POSTCODE: ". $row["postcode"] ." <BR>";
+                        echo $row["address_l1"] ." <BR>";
+                        echo $row["address_l1"] ." <BR>";
+                        echo $row["city"] ." <BR>";
+                        echo $row["town"] ." <BR>";
+                        echo $row["postcode"] ." <BR>";
                         echo "</div>";
                         echo "<div class='popular__description2'>";
                         echo "<div class='popular__description2_item'><span>". $row["bedroom"] . "</span><i class='fa fa-bed' aria-hidden='true'></i></div>";
                         echo "<div class='popular__description2_item'><span>". $row["bathroom"] . "</span><i class='fa-solid fa-toilet'></i></div>";
+                        echo "<div class='popular__description2_item'><span>". $row["bathroom"] . "</span><p>SQFT</p></div>";
 
                         // Display icons based on keywords
                         $keywords = explode(',', $row['keywords']);
@@ -159,7 +160,7 @@
                         echo "</div>";
                         echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
                         echo "</div>";
-                        echo "<div class='card-price'><span>RF </span>" . $row["price"] . "</div>";
+                        echo "<div class='card-price'><span>RF&nbsp;</span>" . $row["price"] . "<span>&nbsp;PCM</span></div>";
                         echo "<img src='../"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";
