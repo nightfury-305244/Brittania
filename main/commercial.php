@@ -138,7 +138,7 @@
                         echo $row["postcode"] ." <BR>";
                         echo "</div>";
                         echo "<div class='popular__description2'>";
-                        echo "<div class='popular__description2_item'><span>". $row["square_feet_size"] . "</span><i class='fa-solid fa-socks'></i></div>";
+                        echo "<div class='popular__description2_item'><span>". number_format($row["square_feet_size"], 0) . "</span><p><b>SQFT</b></p></div>";
 
                         if ($row["bathroom_access"]) {
                             echo "<div class='popular__description2_item'><span></span><i class='fa-solid fa-bath'></i></div>";
@@ -152,7 +152,7 @@
                         echo "</div>";
                         echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
                         echo "</div>";
-                        echo "<div class='card-price'><span>RF&nbsp;</span>" . $row["price"] . "<span>&nbsp;PCM</span></div>";
+                        echo "<div class='card-price'><span>RF&nbsp;</span>" . number_format($row["price"], 0) . "<span>&nbsp;PCM</span></div>";
                         echo "<img src='../"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";

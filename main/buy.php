@@ -140,7 +140,6 @@
                         echo "<div class='popular__description2'>";
                         echo "<div class='popular__description2_item'><span>". $row["bedroom"] . "</span><i class='fa fa-bed' aria-hidden='true'></i></div>";
                         echo "<div class='popular__description2_item'><span>". $row["bathroom"] . "</span><i class='fa-solid fa-toilet'></i></div>";
-                        echo "<div class='popular__description2_item'><span>". $row["bathroom"] . "</span><p>SQFT</p></div>";
 
                         // Display icons based on keywords
                         $keywords = explode(',', $row['keywords']);
@@ -160,7 +159,7 @@
                         echo "</div>";
                         echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
                         echo "</div>";
-                        echo "<div class='card-price'><span>RF&nbsp;</span>" . $row["price"] . "<span>&nbsp;PCM</span></div>";
+                        echo "<div class='card-price'><span>RF&nbsp;</span>" . number_format($row["price"], 0) . "<span>&nbsp;PCM</span></div>";
                         echo "<img src='../"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";

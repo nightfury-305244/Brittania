@@ -173,7 +173,7 @@
                         echo "</div>";
                         echo "<a href='property_details.php?id=" . $row["id"] . "' class='view_button'>View</a>";
                         echo "</div>";
-                        echo "<div class='card-price'><span>RF&nbsp;</span>" . $row["price"] . "<span>&nbsp;PCM</span></div>";
+                        echo "<div class='card-price'><span>RF&nbsp;</span>" . number_format($row["price"], 0) . "<span>&nbsp;PCM</span></div>";
                         echo "<img src='../"  . $row["image"] .  "' alt='' />";
                         echo "</div>";
                         echo "</article>";
